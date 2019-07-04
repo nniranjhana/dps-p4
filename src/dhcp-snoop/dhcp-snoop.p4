@@ -191,6 +191,10 @@ control IngressProcess(inout headers hdr,
                 }
             }
         }
+        else {
+            // Process the remaining non-DHCP packets
+            ipv4_lpm.apply();
+        }
     }
 }
 

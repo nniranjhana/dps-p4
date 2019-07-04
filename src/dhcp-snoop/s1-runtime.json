@@ -1,0 +1,53 @@
+{
+  "target": "bmv2",
+  "p4info": "build/dhcp-snoop.p4.p4info.txt",
+  "bmv2_json": "build/dhcp-snoop.json",
+  "table_entries": [
+    {
+      "table": "IngressProcess.ipv4_lpm",
+      "default_action": true,
+      "action_name": "IngressProcess.drop",
+      "action_params": { }
+    },
+    {
+      "table": "IngressProcess.ipv4_lpm",
+      "match": {
+        "hdr.ipv4.dstAddr": ["10.0.1.1", 32]
+      },
+      "action_name": "IngressProcess.ipv4_forward",
+      "action_params": {
+        "dstAddr": "00:00:00:00:01:01",
+        "port": 1
+      }
+    },
+    {
+      "table": "IngressProcess.ipv4_lpm",
+      "match": {
+        "hdr.ipv4.dstAddr": ["10.0.2.2", 32]
+      },
+      "action_name": "IngressProcess.ipv4_forward",
+      "action_params": {
+        "dstAddr": "00:00:00:00:02:02",
+        "port": 2
+      }
+    },
+
+    {
+      "table": "IngressProcess.dhcp_snoop_db",
+      "default_action": true,
+      "action_name":"IngressProcess.drop",
+      "action_params": { }
+    },
+    {
+      "table": "IngressProcess.dhcp_snoop_db",
+      "match": {
+        "hdr.ipv4.srcAddr": ["10.0.2.2", 32]
+      },
+      "action_name": "IngressProcess.ipv4_forward",
+      "action_params": {
+        "dstAddr": "00:00:00:00:01:01",
+        "port": 1
+      }
+    }
+  ]
+}
