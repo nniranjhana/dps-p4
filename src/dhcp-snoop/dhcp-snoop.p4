@@ -3,8 +3,8 @@
 
 const bit<16> TYPE_IPV4 = 0x800;
 const bit<8> UDP_PROTOCOL = 0x11;
-const bit<8> DHCP_SERVER_PORT = 0x43 //67
-const bit<8> DHCP_CLIENT_PORT = 0x44 //68
+const bit<16> DHCP_SERVER_PORT = 0x43; //67
+const bit<16> DHCP_CLIENT_PORT = 0x44; //68
 
 /**********************************************************
 ********************** H E A D E R S **********************
@@ -39,7 +39,7 @@ header udp_t {
     bit<16> srcPort;
     bit<16> dstPort;
     bit<16> len;
-//    bit<16> checksum; /* optional */
+    bit<16> checksum; /* optional */
 }
 
 header dhcp_t {
@@ -57,7 +57,6 @@ header dhcp_t {
 	bit<128> CHAddr;
 	bit<512> sName;
 	bit<1024> file;
-	//bit<?> options;
 }
 
 struct metadata {
@@ -104,10 +103,8 @@ parser ParsePacket(packet_in packet,
         packet.extract(hdr.udp);
         transition select(hdr.udp.srcPort) {
             DHCP_SERVER_PORT: parse_dhcp;
-            default: transition select(hdr.udp.dstPort) {
-                DHCP_CLIENT_PORT: parse_dhcp;
-                default: accept;
-            }
+            DHCP_CLIENT_PORT: parse_dhcp;
+            default: accept;
         }
     }
 
@@ -121,7 +118,7 @@ parser ParsePacket(packet_in packet,
 ******** C H E C K S U M   V E R I F I C A T I O N ********
 **********************************************************/
 
-control VerifyChecksum(inout headers hdr, inout metadata meta) {
+control ChecksumVerify(inout headers hdr, inout metadata meta) {
     apply { }
 }
 
@@ -133,67 +130,47 @@ control IngressProcess(inout headers hdr,
                        inout metadata meta,
                        inout standard_metadata_t standard_metadata) {
     action drop() {
-        mark_to_drop(standard_metadata);
+        mark_to_drop();
     }
 
-    action ipv4_forward(macAddr_t dstAddr, egressSpec_t port) {
+    action pkt_fwd(macAddr_t dstAddr, egressSpec_t port) {
         standard_metadata.egress_spec = port;
-        hdr.ethernet.srcAddr = hdr.ethernet.dstAddr;
         hdr.ethernet.dstAddr = dstAddr;
         hdr.ipv4.ttl = hdr.ipv4.ttl - 1;
     }
 
-    table ipv4_lpm {
+    table trusted_dhcp_server {
         key = {
-            hdr.ipv4.dstAddr: lpm;
+            hdr.ipv4.srcAddr: lpm;
+            // Ensure DHCP request is from a trusted server inside the network
         }
         actions = {
-            ipv4_forward;
+            pkt_fwd;
             drop;
             NoAction;
         }
-        size = 1024;
-        default_action = drop();
     }
 
-    table dhcp_snoop_db {
+    table trusted_dhcp_client {
         key = {
-            hdr.ipv4.srcAddr: exact;
-            // Ensure DHCP server request originates from inside the network
+            hdr.ethernet.srcAddr: lpm;
+            // Ensure DHCP request is from a known client MAC address
         }
         actions = {
-            // Forward packet if exact match, else drop it
-            ipv4_forward;
+            pkt_fwd;
             drop;
             NoAction;
         }
-        size = 1024;
-        default_action = drop();
     }
 
     apply {
-        if (hdr.ipv4.isValid() && !hdr.udp.isValid()) {
-            // Directly process the non-UDP packets
-            ipv4_lpm.apply();
-        }
-
-        if (hdr.dhcp.isValid()) {
-            if(hdr.dhcp.opCode == 2) {
-                // Process DHCP messages from server
-                dhcp_snoop_db.apply();
-            }
+        if (hdr.ipv4.isValid() && hdr.udp.isValid() && hdr.dhcp.isValid()) {
             if (hdr.dhcp.opCode == 1) {
-                // Process DHCP messages from client
-                // TODO: How to match different bits?
-                if (hdr.ethernet.srcAddr == hdr.dhcp.CHAddr) {
-                    // Drop packets where source MAC and client HW addresses do not match
-                    ipv4_lpm.apply();
-                }
+                trusted_dhcp_client.apply();
             }
-        }
-        else {
-            // Process the remaining non-DHCP packets
-            ipv4_lpm.apply();
+            if (hdr.dhcp.opCode == 2) {
+                trusted_dhcp_server.apply();
+            }
         }
     }
 }
@@ -212,7 +189,7 @@ control EgressProcess(inout headers hdr,
 ********* C H E C K S U M   C O M P U T A T I O N *********
 **********************************************************/
 
-control ComputeChecksum(inout headers hdr, inout metadata meta) {
+control ChecksumCompute(inout headers hdr, inout metadata meta) {
     apply {
         update_checksum(
             hdr.ipv4.isValid(),
@@ -241,6 +218,7 @@ control DeparsePacket(packet_out packet, in headers hdr) {
         packet.emit(hdr.ethernet);
         packet.emit(hdr.ipv4);
         packet.emit(hdr.udp);
+        packet.emit(hdr.dhcp);
     }
 }
 
@@ -250,9 +228,9 @@ control DeparsePacket(packet_out packet, in headers hdr) {
 
 V1Switch(
 ParsePacket(),
-VerifyChecksum(),
+ChecksumVerify(),
 IngressProcess(),
 EgressProcess(),
-ComputeChecksum(),
+ChecksumCompute(),
 DeparsePacket()
 ) main;
