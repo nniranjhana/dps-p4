@@ -1,0 +1,47 @@
+{
+  "target": "bmv2",
+  "p4info": "build/ip-spoof.p4info",
+  "bmv2_json": "build/ip-spoof.json",
+  "table_entries": [
+    {
+      "table": "IngressProcess.estd_client",
+      "default_action": true,
+      "action_name": "IngressProcess.drop",
+      "action_params": { }
+    },
+    {
+      "table": "IngressProcess.estd_client",
+      "match": {
+        "hdr.ipv4.dstAddr": ["10.0.1.2", 32]
+      },
+      "action_name": "IngressProcess.pkt_fwd",
+      "action_params": {
+        "dstAddr": "00:00:00:00:01:02",
+        "port": 1
+      }
+    },
+
+    {
+      "table": "IngressProcess.nack_client",
+      "default_action": true,
+      "action_name":"IngressProcess.drop",
+      "action_params": { }
+    },
+    {
+      "table": "IngressProcess.nack_client",
+      "match": {
+        "hdr.ethernet.srcAddr": ["00:00:00:00:01:01", 48]
+      },
+      "action_name": "IngressProcess.drop",
+      "action_params": { }
+    },
+    {
+      "table": "IngressProcess.nack_client",
+      "match": {
+        "hdr.ethernet.srcAddr": ["00:00:00:00:01:02", 48]
+      },
+      "action_name": "IngressProcess.drop",
+      "action_params": { }
+    }
+  ]
+}
