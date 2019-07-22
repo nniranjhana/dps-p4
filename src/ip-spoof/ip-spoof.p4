@@ -112,8 +112,8 @@ control IngressProcess(inout headers hdr,
 
     table estd_client {
         key = {
-            hdr.ipv4.dstAddr: lpm;
-            // Permit packet only if destination IP is in the DHCP bindings table
+            hdr.ipv4.srcAddr: lpm;
+            // Permit packet only if source IP is in the DHCP bindings table
         }
         actions = {
             pkt_fwd;
@@ -132,6 +132,17 @@ control IngressProcess(inout headers hdr,
         }
     }
 
+    table wait_client {
+        key = {
+            hdr.ethernet.srcAddr: lpm;
+        }
+        actions = {
+            pkt_fwd;
+            drop;
+            NoAction;
+        }
+    }
+
     apply {
         if (hdr.ipv4.isValid()) {
             // If client has already been assigned an IP address
@@ -139,11 +150,12 @@ control IngressProcess(inout headers hdr,
                 estd_client.apply();
             }
             else {
-                // Drop the non-DHCP packets till client IP is established
-                if (!(hdr.udp.isValid() && ((hdr.udp.dstPort == 67) || (hdr.udp.dstPort == 68)))) {
-                    nack_client.apply();
+                // Allow only DHCP packets without client IP
+                if (hdr.udp.isValid() && hdr.udp.srcPort == 68) {
+                    wait_client.apply();
                 }
-                else estd_client.apply();
+                // Drop the non-DHCP packets till client IP is established
+                else nack_client.apply();
             }
         }
     }

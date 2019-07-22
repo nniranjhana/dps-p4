@@ -12,12 +12,12 @@
     {
       "table": "IngressProcess.estd_client",
       "match": {
-        "hdr.ipv4.dstAddr": ["10.0.1.2", 32]
+        "hdr.ipv4.srcAddr": ["10.0.1.1", 32]
       },
       "action_name": "IngressProcess.pkt_fwd",
       "action_params": {
         "dstAddr": "00:00:00:00:01:02",
-        "port": 1
+        "port": 2
       }
     },
 
@@ -35,13 +35,23 @@
       "action_name": "IngressProcess.drop",
       "action_params": { }
     },
+
     {
-      "table": "IngressProcess.nack_client",
-      "match": {
-        "hdr.ethernet.srcAddr": ["00:00:00:00:01:02", 48]
-      },
-      "action_name": "IngressProcess.drop",
+      "table": "IngressProcess.wait_client",
+      "default_action": true,
+      "action_name":"IngressProcess.drop",
       "action_params": { }
-    }
+    },
+    {
+      "table": "IngressProcess.wait_client",
+      "match": {
+        "hdr.ethernet.srcAddr": ["00:00:00:00:01:01", 48]
+      },
+      "action_name": "IngressProcess.pkt_fwd",
+      "action_params": {
+        "dstAddr": "00:00:00:00:01:02",
+        "port": 2
+      }
+    }  
   ]
 }
