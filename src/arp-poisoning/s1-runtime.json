@@ -1,0 +1,43 @@
+{
+  "target": "bmv2",
+  "p4info": "build/dynamic-arp-inspection.p4info",
+  "bmv2_json": "build/dynamic-arp-inspection.json",
+  "table_entries": [
+    {
+      "table": "IngressProcess.arp_bcast",
+      "default_action": true,
+      "action_name": "IngressProcess.drop",
+      "action_params": { }
+    },
+    {
+      "table": "IngressProcess.arp_bcast",
+      "match": {
+        "hdr.ethernet.srcAddr": ["00:00:00:00:01:01", 48]
+      },
+      "action_name": "IngressProcess.pkt_fwd",
+      "action_params": {
+        "dstAddr": "00:00:00:00:01:02",
+        "port": 2
+      }
+    },
+
+    {
+      "table": "IngressProcess.arp_cache",
+      "default_action": true,
+      "action_name":"IngressProcess.drop",
+      "action_params": { }
+    },
+    {
+      "table": "IngressProcess.arp_cache",
+      "match": {
+        "hdr.arp.SPA": ["10.0.1.2", 32]
+      },
+      "action_name": "IngressProcess.pkt_check",
+      "action_params": {
+        "SHA": "00:00:00:00:01:02",
+        "dstAddr": "00:00:00:00:01:01",
+        "port": 1
+      }
+    }
+  ]
+}

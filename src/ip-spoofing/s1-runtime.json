@@ -1,7 +1,7 @@
 {
   "target": "bmv2",
-  "p4info": "build/ip-spoof.p4info",
-  "bmv2_json": "build/ip-spoof.json",
+  "p4info": "build/ip-source-guard.p4info",
+  "bmv2_json": "build/ip-source-guard.json",
   "table_entries": [
     {
       "table": "IngressProcess.estd_client",
