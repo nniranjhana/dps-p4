@@ -1,0 +1,165 @@
+
+[2019-07-23 07:21:44.594] /p4.P4Runtime/SetForwardingPipelineConfig
+---
+Message too long (26367 bytes)! Skipping log...
+---
+
+[2019-07-23 07:21:44.600] /p4.P4Runtime/Write
+---
+election_id {
+  low: 1
+}
+updates {
+  type: INSERT
+  entity {
+    table_entry {
+      table_id: 33562212
+      action {
+        action {
+          action_id: 16819739
+        }
+      }
+      is_default_action: true
+    }
+  }
+}
+---
+
+[2019-07-23 07:21:44.602] /p4.P4Runtime/Write
+---
+election_id {
+  low: 1
+}
+updates {
+  type: INSERT
+  entity {
+    table_entry {
+      table_id: 33562212
+      match {
+        field_id: 1
+        lpm {
+          value: "\n\000\001\001"
+          prefix_len: 32
+        }
+      }
+      action {
+        action {
+          action_id: 16788420
+          params {
+            param_id: 1
+            value: "\000\000\000\000\001\002"
+          }
+          params {
+            param_id: 2
+            value: "\000\002"
+          }
+        }
+      }
+    }
+  }
+}
+---
+
+[2019-07-23 07:21:44.604] /p4.P4Runtime/Write
+---
+election_id {
+  low: 1
+}
+updates {
+  type: INSERT
+  entity {
+    table_entry {
+      table_id: 33577120
+      action {
+        action {
+          action_id: 16819739
+        }
+      }
+      is_default_action: true
+    }
+  }
+}
+---
+
+[2019-07-23 07:21:44.604] /p4.P4Runtime/Write
+---
+election_id {
+  low: 1
+}
+updates {
+  type: INSERT
+  entity {
+    table_entry {
+      table_id: 33577120
+      match {
+        field_id: 1
+        lpm {
+          value: "\000\000\000\000\001\001"
+          prefix_len: 48
+        }
+      }
+      action {
+        action {
+          action_id: 16819739
+        }
+      }
+    }
+  }
+}
+---
+
+[2019-07-23 07:21:44.605] /p4.P4Runtime/Write
+---
+election_id {
+  low: 1
+}
+updates {
+  type: INSERT
+  entity {
+    table_entry {
+      table_id: 33565427
+      action {
+        action {
+          action_id: 16819739
+        }
+      }
+      is_default_action: true
+    }
+  }
+}
+---
+
+[2019-07-23 07:21:44.606] /p4.P4Runtime/Write
+---
+election_id {
+  low: 1
+}
+updates {
+  type: INSERT
+  entity {
+    table_entry {
+      table_id: 33565427
+      match {
+        field_id: 1
+        lpm {
+          value: "\000\000\000\000\001\001"
+          prefix_len: 48
+        }
+      }
+      action {
+        action {
+          action_id: 16788420
+          params {
+            param_id: 1
+            value: "\000\000\000\000\001\002"
+          }
+          params {
+            param_id: 2
+            value: "\000\002"
+          }
+        }
+      }
+    }
+  }
+}
+---

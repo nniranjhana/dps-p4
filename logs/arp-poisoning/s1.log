@@ -1,0 +1,944 @@
+Calling target program-options parser
+Adding interface s1-eth1 as port 1
+[07:43:43.168] [bmv2] [D] [thread 8145] Adding interface s1-eth1 as port 1
+Adding interface s1-eth2 as port 2
+[07:43:43.199] [bmv2] [D] [thread 8145] Adding interface s1-eth2 as port 2
+Adding interface s1-eth3 as port 3
+[07:43:43.222] [bmv2] [D] [thread 8145] Adding interface s1-eth3 as port 3
+I0723 07:43:43.250866804    8145 server_builder.cc:247]      Synchronous server. Num CQs: 1, Min pollers: 1, Max Pollers: 2147483647, CQ timeout (msec): 1000
+Server listening on 0.0.0.0:50051
+Thrift server was started
+New connection
+P4Runtime SetForwardingPipelineConfig
+[07:43:44.834] [bmv2] [D] [thread 8203] Set default default entry for table 'IngressProcess.arp_bcast': NoAction - 
+[07:43:44.834] [bmv2] [D] [thread 8203] Set default default entry for table 'IngressProcess.arp_cache': NoAction - 
+[07:43:44.836] [bmv2] [D] [thread 8208] [0.0] [cxt 0] Processing packet received on port 1
+[07:43:44.836] [bmv2] [D] [thread 8208] [0.0] [cxt 0] Parser 'parser': start
+[07:43:44.836] [bmv2] [D] [thread 8208] [0.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:44.836] [bmv2] [D] [thread 8208] [0.0] [cxt 0] Extracting header 'ethernet'
+[07:43:44.836] [bmv2] [D] [thread 8208] [0.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:44.836] [bmv2] [T] [thread 8208] [0.0] [cxt 0] Bytes parsed: 14
+[07:43:44.836] [bmv2] [D] [thread 8208] [0.0] [cxt 0] Parser 'parser': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [0.0] [cxt 0] Pipeline 'ingress': start
+[07:43:44.836] [bmv2] [T] [thread 8208] [0.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:44.836] [bmv2] [D] [thread 8208] [0.0] [cxt 0] Pipeline 'ingress': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [0.0] [cxt 0] Egress port is 0
+[07:43:44.836] [bmv2] [D] [thread 8208] [1.0] [cxt 0] Processing packet received on port 2
+[07:43:44.836] [bmv2] [D] [thread 8208] [1.0] [cxt 0] Parser 'parser': start
+[07:43:44.836] [bmv2] [D] [thread 8208] [1.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:44.836] [bmv2] [D] [thread 8208] [1.0] [cxt 0] Extracting header 'ethernet'
+[07:43:44.836] [bmv2] [D] [thread 8208] [1.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:44.836] [bmv2] [T] [thread 8208] [1.0] [cxt 0] Bytes parsed: 14
+[07:43:44.836] [bmv2] [D] [thread 8208] [1.0] [cxt 0] Parser 'parser': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [1.0] [cxt 0] Pipeline 'ingress': start
+[07:43:44.836] [bmv2] [T] [thread 8208] [1.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:44.836] [bmv2] [D] [thread 8208] [1.0] [cxt 0] Pipeline 'ingress': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [1.0] [cxt 0] Egress port is 0
+[07:43:44.836] [bmv2] [D] [thread 8208] [2.0] [cxt 0] Processing packet received on port 3
+[07:43:44.836] [bmv2] [D] [thread 8208] [2.0] [cxt 0] Parser 'parser': start
+[07:43:44.836] [bmv2] [D] [thread 8208] [2.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:44.836] [bmv2] [D] [thread 8208] [2.0] [cxt 0] Extracting header 'ethernet'
+[07:43:44.836] [bmv2] [D] [thread 8208] [2.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:44.836] [bmv2] [T] [thread 8208] [2.0] [cxt 0] Bytes parsed: 14
+[07:43:44.836] [bmv2] [D] [thread 8208] [2.0] [cxt 0] Parser 'parser': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [2.0] [cxt 0] Pipeline 'ingress': start
+[07:43:44.836] [bmv2] [T] [thread 8208] [2.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:44.836] [bmv2] [D] [thread 8208] [2.0] [cxt 0] Pipeline 'ingress': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [2.0] [cxt 0] Egress port is 0
+[07:43:44.836] [bmv2] [D] [thread 8208] [3.0] [cxt 0] Processing packet received on port 1
+[07:43:44.836] [bmv2] [D] [thread 8208] [3.0] [cxt 0] Parser 'parser': start
+[07:43:44.836] [bmv2] [D] [thread 8208] [3.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:44.836] [bmv2] [D] [thread 8208] [3.0] [cxt 0] Extracting header 'ethernet'
+[07:43:44.836] [bmv2] [D] [thread 8208] [3.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:44.836] [bmv2] [T] [thread 8208] [3.0] [cxt 0] Bytes parsed: 14
+[07:43:44.836] [bmv2] [D] [thread 8208] [3.0] [cxt 0] Parser 'parser': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [3.0] [cxt 0] Pipeline 'ingress': start
+[07:43:44.836] [bmv2] [T] [thread 8208] [3.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:44.836] [bmv2] [D] [thread 8208] [3.0] [cxt 0] Pipeline 'ingress': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [3.0] [cxt 0] Egress port is 0
+[07:43:44.836] [bmv2] [D] [thread 8208] [4.0] [cxt 0] Processing packet received on port 2
+[07:43:44.836] [bmv2] [D] [thread 8208] [4.0] [cxt 0] Parser 'parser': start
+[07:43:44.836] [bmv2] [D] [thread 8208] [4.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:44.836] [bmv2] [D] [thread 8208] [4.0] [cxt 0] Extracting header 'ethernet'
+[07:43:44.836] [bmv2] [D] [thread 8208] [4.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:44.836] [bmv2] [T] [thread 8208] [4.0] [cxt 0] Bytes parsed: 14
+[07:43:44.836] [bmv2] [D] [thread 8208] [4.0] [cxt 0] Parser 'parser': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [4.0] [cxt 0] Pipeline 'ingress': start
+[07:43:44.836] [bmv2] [T] [thread 8208] [4.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:44.836] [bmv2] [D] [thread 8208] [4.0] [cxt 0] Pipeline 'ingress': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [4.0] [cxt 0] Egress port is 0
+[07:43:44.836] [bmv2] [D] [thread 8208] [5.0] [cxt 0] Processing packet received on port 3
+[07:43:44.836] [bmv2] [D] [thread 8208] [5.0] [cxt 0] Parser 'parser': start
+[07:43:44.836] [bmv2] [D] [thread 8208] [5.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:44.836] [bmv2] [D] [thread 8208] [5.0] [cxt 0] Extracting header 'ethernet'
+[07:43:44.836] [bmv2] [D] [thread 8208] [5.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:44.836] [bmv2] [T] [thread 8208] [5.0] [cxt 0] Bytes parsed: 14
+[07:43:44.836] [bmv2] [D] [thread 8208] [5.0] [cxt 0] Parser 'parser': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [5.0] [cxt 0] Pipeline 'ingress': start
+[07:43:44.836] [bmv2] [T] [thread 8208] [5.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:44.836] [bmv2] [D] [thread 8208] [5.0] [cxt 0] Pipeline 'ingress': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [5.0] [cxt 0] Egress port is 0
+[07:43:44.836] [bmv2] [D] [thread 8208] [6.0] [cxt 0] Processing packet received on port 1
+[07:43:44.836] [bmv2] [D] [thread 8208] [6.0] [cxt 0] Parser 'parser': start
+[07:43:44.836] [bmv2] [D] [thread 8208] [6.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:44.836] [bmv2] [D] [thread 8208] [6.0] [cxt 0] Extracting header 'ethernet'
+[07:43:44.836] [bmv2] [D] [thread 8208] [6.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:44.836] [bmv2] [T] [thread 8208] [6.0] [cxt 0] Bytes parsed: 14
+[07:43:44.836] [bmv2] [D] [thread 8208] [6.0] [cxt 0] Parser 'parser': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [6.0] [cxt 0] Pipeline 'ingress': start
+[07:43:44.836] [bmv2] [T] [thread 8208] [6.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:44.836] [bmv2] [D] [thread 8208] [6.0] [cxt 0] Pipeline 'ingress': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [6.0] [cxt 0] Egress port is 0
+[07:43:44.836] [bmv2] [D] [thread 8208] [7.0] [cxt 0] Processing packet received on port 3
+[07:43:44.836] [bmv2] [D] [thread 8208] [7.0] [cxt 0] Parser 'parser': start
+[07:43:44.836] [bmv2] [D] [thread 8208] [7.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:44.836] [bmv2] [D] [thread 8208] [7.0] [cxt 0] Extracting header 'ethernet'
+[07:43:44.836] [bmv2] [D] [thread 8208] [7.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:44.836] [bmv2] [T] [thread 8208] [7.0] [cxt 0] Bytes parsed: 14
+[07:43:44.836] [bmv2] [D] [thread 8208] [7.0] [cxt 0] Parser 'parser': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [7.0] [cxt 0] Pipeline 'ingress': start
+[07:43:44.836] [bmv2] [T] [thread 8208] [7.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:44.836] [bmv2] [D] [thread 8208] [7.0] [cxt 0] Pipeline 'ingress': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [7.0] [cxt 0] Egress port is 0
+[07:43:44.836] [bmv2] [D] [thread 8208] [8.0] [cxt 0] Processing packet received on port 1
+[07:43:44.836] [bmv2] [D] [thread 8208] [8.0] [cxt 0] Parser 'parser': start
+[07:43:44.836] [bmv2] [D] [thread 8208] [8.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:44.836] [bmv2] [D] [thread 8208] [8.0] [cxt 0] Extracting header 'ethernet'
+[07:43:44.836] [bmv2] [D] [thread 8208] [8.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:44.836] [bmv2] [T] [thread 8208] [8.0] [cxt 0] Bytes parsed: 14
+[07:43:44.836] [bmv2] [D] [thread 8208] [8.0] [cxt 0] Parser 'parser': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [8.0] [cxt 0] Pipeline 'ingress': start
+[07:43:44.836] [bmv2] [T] [thread 8208] [8.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:44.836] [bmv2] [D] [thread 8208] [8.0] [cxt 0] Pipeline 'ingress': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [8.0] [cxt 0] Egress port is 0
+[07:43:44.836] [bmv2] [D] [thread 8208] [9.0] [cxt 0] Processing packet received on port 3
+[07:43:44.836] [bmv2] [D] [thread 8208] [9.0] [cxt 0] Parser 'parser': start
+[07:43:44.836] [bmv2] [D] [thread 8208] [9.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:44.836] [bmv2] [D] [thread 8208] [9.0] [cxt 0] Extracting header 'ethernet'
+[07:43:44.836] [bmv2] [D] [thread 8208] [9.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:44.836] [bmv2] [T] [thread 8208] [9.0] [cxt 0] Bytes parsed: 14
+[07:43:44.836] [bmv2] [D] [thread 8208] [9.0] [cxt 0] Parser 'parser': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [9.0] [cxt 0] Pipeline 'ingress': start
+[07:43:44.836] [bmv2] [T] [thread 8208] [9.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:44.836] [bmv2] [D] [thread 8208] [9.0] [cxt 0] Pipeline 'ingress': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [9.0] [cxt 0] Egress port is 0
+[07:43:44.836] [bmv2] [D] [thread 8208] [10.0] [cxt 0] Processing packet received on port 1
+[07:43:44.836] [bmv2] [D] [thread 8208] [10.0] [cxt 0] Parser 'parser': start
+[07:43:44.836] [bmv2] [D] [thread 8208] [10.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:44.836] [bmv2] [D] [thread 8208] [10.0] [cxt 0] Extracting header 'ethernet'
+[07:43:44.836] [bmv2] [D] [thread 8208] [10.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:44.836] [bmv2] [T] [thread 8208] [10.0] [cxt 0] Bytes parsed: 14
+[07:43:44.836] [bmv2] [D] [thread 8208] [10.0] [cxt 0] Parser 'parser': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [10.0] [cxt 0] Pipeline 'ingress': start
+[07:43:44.836] [bmv2] [T] [thread 8208] [10.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:44.836] [bmv2] [D] [thread 8208] [10.0] [cxt 0] Pipeline 'ingress': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [10.0] [cxt 0] Egress port is 0
+[07:43:44.836] [bmv2] [D] [thread 8208] [11.0] [cxt 0] Processing packet received on port 3
+[07:43:44.836] [bmv2] [D] [thread 8208] [11.0] [cxt 0] Parser 'parser': start
+[07:43:44.836] [bmv2] [D] [thread 8208] [11.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:44.836] [bmv2] [D] [thread 8208] [11.0] [cxt 0] Extracting header 'ethernet'
+[07:43:44.836] [bmv2] [D] [thread 8208] [11.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:44.836] [bmv2] [T] [thread 8208] [11.0] [cxt 0] Bytes parsed: 14
+[07:43:44.836] [bmv2] [D] [thread 8208] [11.0] [cxt 0] Parser 'parser': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [11.0] [cxt 0] Pipeline 'ingress': start
+[07:43:44.836] [bmv2] [T] [thread 8208] [11.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:44.836] [bmv2] [D] [thread 8208] [11.0] [cxt 0] Pipeline 'ingress': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [11.0] [cxt 0] Egress port is 0
+[07:43:44.836] [bmv2] [D] [thread 8208] [12.0] [cxt 0] Processing packet received on port 1
+[07:43:44.836] [bmv2] [D] [thread 8208] [12.0] [cxt 0] Parser 'parser': start
+[07:43:44.836] [bmv2] [D] [thread 8208] [12.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:44.836] [bmv2] [D] [thread 8208] [12.0] [cxt 0] Extracting header 'ethernet'
+[07:43:44.836] [bmv2] [D] [thread 8208] [12.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:44.836] [bmv2] [T] [thread 8208] [12.0] [cxt 0] Bytes parsed: 14
+[07:43:44.836] [bmv2] [D] [thread 8208] [12.0] [cxt 0] Parser 'parser': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [12.0] [cxt 0] Pipeline 'ingress': start
+[07:43:44.836] [bmv2] [T] [thread 8208] [12.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:44.836] [bmv2] [D] [thread 8208] [12.0] [cxt 0] Pipeline 'ingress': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [12.0] [cxt 0] Egress port is 0
+[07:43:44.836] [bmv2] [D] [thread 8208] [13.0] [cxt 0] Processing packet received on port 3
+[07:43:44.836] [bmv2] [D] [thread 8208] [13.0] [cxt 0] Parser 'parser': start
+[07:43:44.836] [bmv2] [D] [thread 8208] [13.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:44.836] [bmv2] [D] [thread 8208] [13.0] [cxt 0] Extracting header 'ethernet'
+[07:43:44.836] [bmv2] [D] [thread 8208] [13.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:44.836] [bmv2] [T] [thread 8208] [13.0] [cxt 0] Bytes parsed: 14
+[07:43:44.836] [bmv2] [D] [thread 8208] [13.0] [cxt 0] Parser 'parser': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [13.0] [cxt 0] Pipeline 'ingress': start
+[07:43:44.836] [bmv2] [T] [thread 8208] [13.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:44.836] [bmv2] [D] [thread 8208] [13.0] [cxt 0] Pipeline 'ingress': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [13.0] [cxt 0] Egress port is 0
+[07:43:44.836] [bmv2] [D] [thread 8208] [14.0] [cxt 0] Processing packet received on port 1
+[07:43:44.836] [bmv2] [D] [thread 8208] [14.0] [cxt 0] Parser 'parser': start
+[07:43:44.836] [bmv2] [D] [thread 8208] [14.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:44.836] [bmv2] [D] [thread 8208] [14.0] [cxt 0] Extracting header 'ethernet'
+[07:43:44.836] [bmv2] [D] [thread 8208] [14.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:44.836] [bmv2] [T] [thread 8208] [14.0] [cxt 0] Bytes parsed: 14
+[07:43:44.836] [bmv2] [D] [thread 8208] [14.0] [cxt 0] Parser 'parser': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [14.0] [cxt 0] Pipeline 'ingress': start
+[07:43:44.836] [bmv2] [T] [thread 8208] [14.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:44.836] [bmv2] [D] [thread 8208] [14.0] [cxt 0] Pipeline 'ingress': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [14.0] [cxt 0] Egress port is 0
+[07:43:44.836] [bmv2] [D] [thread 8208] [15.0] [cxt 0] Processing packet received on port 3
+[07:43:44.836] [bmv2] [D] [thread 8208] [15.0] [cxt 0] Parser 'parser': start
+[07:43:44.836] [bmv2] [D] [thread 8208] [15.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:44.836] [bmv2] [D] [thread 8208] [15.0] [cxt 0] Extracting header 'ethernet'
+[07:43:44.836] [bmv2] [D] [thread 8208] [15.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:44.836] [bmv2] [T] [thread 8208] [15.0] [cxt 0] Bytes parsed: 14
+[07:43:44.836] [bmv2] [D] [thread 8208] [15.0] [cxt 0] Parser 'parser': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [15.0] [cxt 0] Pipeline 'ingress': start
+[07:43:44.836] [bmv2] [T] [thread 8208] [15.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:44.836] [bmv2] [D] [thread 8208] [15.0] [cxt 0] Pipeline 'ingress': end
+[07:43:44.836] [bmv2] [D] [thread 8208] [15.0] [cxt 0] Egress port is 0
+[07:43:44.836] [bmv2] [D] [thread 8209] [0.0] [cxt 0] Pipeline 'egress': start
+[07:43:44.836] [bmv2] [D] [thread 8209] [0.0] [cxt 0] Pipeline 'egress': end
+[07:43:44.836] [bmv2] [D] [thread 8209] [0.0] [cxt 0] Deparser 'deparser': start
+[07:43:44.836] [bmv2] [D] [thread 8209] [0.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:44.836] [bmv2] [D] [thread 8209] [0.0] [cxt 0] Deparser 'deparser': end
+[07:43:44.836] [bmv2] [D] [thread 8209] [1.0] [cxt 0] Pipeline 'egress': start
+[07:43:44.836] [bmv2] [D] [thread 8209] [1.0] [cxt 0] Pipeline 'egress': end
+[07:43:44.836] [bmv2] [D] [thread 8209] [1.0] [cxt 0] Deparser 'deparser': start
+[07:43:44.836] [bmv2] [D] [thread 8209] [1.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:44.836] [bmv2] [D] [thread 8209] [1.0] [cxt 0] Deparser 'deparser': end
+[07:43:44.836] [bmv2] [D] [thread 8209] [2.0] [cxt 0] Pipeline 'egress': start
+[07:43:44.836] [bmv2] [D] [thread 8209] [2.0] [cxt 0] Pipeline 'egress': end
+[07:43:44.836] [bmv2] [D] [thread 8209] [2.0] [cxt 0] Deparser 'deparser': start
+[07:43:44.836] [bmv2] [D] [thread 8209] [2.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:44.836] [bmv2] [D] [thread 8209] [2.0] [cxt 0] Deparser 'deparser': end
+[07:43:44.836] [bmv2] [D] [thread 8209] [3.0] [cxt 0] Pipeline 'egress': start
+[07:43:44.836] [bmv2] [D] [thread 8209] [3.0] [cxt 0] Pipeline 'egress': end
+[07:43:44.836] [bmv2] [D] [thread 8209] [3.0] [cxt 0] Deparser 'deparser': start
+[07:43:44.836] [bmv2] [D] [thread 8209] [3.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:44.836] [bmv2] [D] [thread 8209] [3.0] [cxt 0] Deparser 'deparser': end
+[07:43:44.836] [bmv2] [D] [thread 8209] [4.0] [cxt 0] Pipeline 'egress': start
+[07:43:44.836] [bmv2] [D] [thread 8209] [4.0] [cxt 0] Pipeline 'egress': end
+[07:43:44.836] [bmv2] [D] [thread 8209] [4.0] [cxt 0] Deparser 'deparser': start
+[07:43:44.836] [bmv2] [D] [thread 8209] [4.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:44.836] [bmv2] [D] [thread 8209] [4.0] [cxt 0] Deparser 'deparser': end
+[07:43:44.836] [bmv2] [D] [thread 8209] [5.0] [cxt 0] Pipeline 'egress': start
+[07:43:44.836] [bmv2] [D] [thread 8209] [5.0] [cxt 0] Pipeline 'egress': end
+[07:43:44.836] [bmv2] [D] [thread 8209] [5.0] [cxt 0] Deparser 'deparser': start
+[07:43:44.836] [bmv2] [D] [thread 8209] [5.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:44.836] [bmv2] [D] [thread 8209] [5.0] [cxt 0] Deparser 'deparser': end
+[07:43:44.836] [bmv2] [D] [thread 8209] [6.0] [cxt 0] Pipeline 'egress': start
+[07:43:44.836] [bmv2] [D] [thread 8209] [6.0] [cxt 0] Pipeline 'egress': end
+[07:43:44.836] [bmv2] [D] [thread 8209] [6.0] [cxt 0] Deparser 'deparser': start
+[07:43:44.836] [bmv2] [D] [thread 8209] [6.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:44.836] [bmv2] [D] [thread 8209] [6.0] [cxt 0] Deparser 'deparser': end
+[07:43:44.836] [bmv2] [D] [thread 8209] [7.0] [cxt 0] Pipeline 'egress': start
+[07:43:44.836] [bmv2] [D] [thread 8209] [7.0] [cxt 0] Pipeline 'egress': end
+[07:43:44.836] [bmv2] [D] [thread 8209] [7.0] [cxt 0] Deparser 'deparser': start
+[07:43:44.837] [bmv2] [D] [thread 8209] [7.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:44.837] [bmv2] [D] [thread 8209] [7.0] [cxt 0] Deparser 'deparser': end
+[07:43:44.837] [bmv2] [D] [thread 8209] [8.0] [cxt 0] Pipeline 'egress': start
+[07:43:44.837] [bmv2] [D] [thread 8209] [8.0] [cxt 0] Pipeline 'egress': end
+[07:43:44.837] [bmv2] [D] [thread 8209] [8.0] [cxt 0] Deparser 'deparser': start
+[07:43:44.837] [bmv2] [D] [thread 8209] [8.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:44.837] [bmv2] [D] [thread 8209] [8.0] [cxt 0] Deparser 'deparser': end
+[07:43:44.837] [bmv2] [D] [thread 8209] [9.0] [cxt 0] Pipeline 'egress': start
+[07:43:44.837] [bmv2] [D] [thread 8209] [9.0] [cxt 0] Pipeline 'egress': end
+[07:43:44.837] [bmv2] [D] [thread 8209] [9.0] [cxt 0] Deparser 'deparser': start
+[07:43:44.837] [bmv2] [D] [thread 8209] [9.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:44.837] [bmv2] [D] [thread 8209] [9.0] [cxt 0] Deparser 'deparser': end
+[07:43:44.837] [bmv2] [D] [thread 8209] [10.0] [cxt 0] Pipeline 'egress': start
+[07:43:44.837] [bmv2] [D] [thread 8209] [10.0] [cxt 0] Pipeline 'egress': end
+[07:43:44.837] [bmv2] [D] [thread 8209] [10.0] [cxt 0] Deparser 'deparser': start
+[07:43:44.837] [bmv2] [D] [thread 8209] [10.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:44.837] [bmv2] [D] [thread 8209] [10.0] [cxt 0] Deparser 'deparser': end
+[07:43:44.837] [bmv2] [D] [thread 8209] [11.0] [cxt 0] Pipeline 'egress': start
+[07:43:44.837] [bmv2] [D] [thread 8209] [11.0] [cxt 0] Pipeline 'egress': end
+[07:43:44.837] [bmv2] [D] [thread 8209] [11.0] [cxt 0] Deparser 'deparser': start
+[07:43:44.837] [bmv2] [D] [thread 8209] [11.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:44.837] [bmv2] [D] [thread 8209] [11.0] [cxt 0] Deparser 'deparser': end
+[07:43:44.837] [bmv2] [D] [thread 8209] [12.0] [cxt 0] Pipeline 'egress': start
+[07:43:44.837] [bmv2] [D] [thread 8209] [12.0] [cxt 0] Pipeline 'egress': end
+[07:43:44.837] [bmv2] [D] [thread 8209] [12.0] [cxt 0] Deparser 'deparser': start
+[07:43:44.837] [bmv2] [D] [thread 8209] [12.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:44.837] [bmv2] [D] [thread 8209] [12.0] [cxt 0] Deparser 'deparser': end
+[07:43:44.837] [bmv2] [D] [thread 8209] [13.0] [cxt 0] Pipeline 'egress': start
+[07:43:44.837] [bmv2] [D] [thread 8209] [13.0] [cxt 0] Pipeline 'egress': end
+[07:43:44.837] [bmv2] [D] [thread 8209] [13.0] [cxt 0] Deparser 'deparser': start
+[07:43:44.837] [bmv2] [D] [thread 8209] [13.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:44.837] [bmv2] [D] [thread 8209] [13.0] [cxt 0] Deparser 'deparser': end
+[07:43:44.837] [bmv2] [D] [thread 8209] [14.0] [cxt 0] Pipeline 'egress': start
+[07:43:44.837] [bmv2] [D] [thread 8209] [14.0] [cxt 0] Pipeline 'egress': end
+[07:43:44.837] [bmv2] [D] [thread 8209] [14.0] [cxt 0] Deparser 'deparser': start
+[07:43:44.837] [bmv2] [D] [thread 8209] [14.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:44.837] [bmv2] [D] [thread 8209] [14.0] [cxt 0] Deparser 'deparser': end
+[07:43:44.837] [bmv2] [D] [thread 8209] [15.0] [cxt 0] Pipeline 'egress': start
+[07:43:44.837] [bmv2] [D] [thread 8209] [15.0] [cxt 0] Pipeline 'egress': end
+[07:43:44.837] [bmv2] [D] [thread 8209] [15.0] [cxt 0] Deparser 'deparser': start
+[07:43:44.837] [bmv2] [D] [thread 8209] [15.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:44.837] [bmv2] [D] [thread 8209] [15.0] [cxt 0] Deparser 'deparser': end
+[07:43:44.837] [bmv2] [D] [thread 8213] [0.0] [cxt 0] Transmitting packet of size 78 out of port 0
+[07:43:44.837] [bmv2] [D] [thread 8213] [1.0] [cxt 0] Transmitting packet of size 110 out of port 0
+[07:43:44.837] [bmv2] [D] [thread 8213] [2.0] [cxt 0] Transmitting packet of size 90 out of port 0
+[07:43:44.837] [bmv2] [D] [thread 8213] [3.0] [cxt 0] Transmitting packet of size 90 out of port 0
+[07:43:44.837] [bmv2] [D] [thread 8213] [4.0] [cxt 0] Transmitting packet of size 110 out of port 0
+[07:43:44.837] [bmv2] [D] [thread 8213] [5.0] [cxt 0] Transmitting packet of size 90 out of port 0
+[07:43:44.837] [bmv2] [D] [thread 8213] [6.0] [cxt 0] Transmitting packet of size 90 out of port 0
+[07:43:44.837] [bmv2] [D] [thread 8213] [7.0] [cxt 0] Transmitting packet of size 70 out of port 0
+[07:43:44.837] [bmv2] [D] [thread 8213] [8.0] [cxt 0] Transmitting packet of size 70 out of port 0
+[07:43:44.837] [bmv2] [D] [thread 8213] [9.0] [cxt 0] Transmitting packet of size 90 out of port 0
+[07:43:44.837] [bmv2] [D] [thread 8213] [10.0] [cxt 0] Transmitting packet of size 90 out of port 0
+[07:43:44.837] [bmv2] [D] [thread 8213] [11.0] [cxt 0] Transmitting packet of size 203 out of port 0
+[07:43:44.837] [bmv2] [D] [thread 8213] [12.0] [cxt 0] Transmitting packet of size 203 out of port 0
+[07:43:44.837] [bmv2] [D] [thread 8213] [13.0] [cxt 0] Transmitting packet of size 208 out of port 0
+[07:43:44.837] [bmv2] [D] [thread 8213] [14.0] [cxt 0] Transmitting packet of size 110 out of port 0
+[07:43:44.837] [bmv2] [D] [thread 8213] [15.0] [cxt 0] Transmitting packet of size 110 out of port 0
+P4Runtime Write
+election_id {
+  low: 1
+}
+updates {
+  type: INSERT
+  entity {
+    table_entry {
+      table_id: 33607173
+      action {
+        action {
+          action_id: 16819739
+        }
+      }
+      is_default_action: true
+    }
+  }
+}
+[07:43:44.839] [bmv2] [D] [thread 8203] Set default entry for table 'IngressProcess.arp_bcast': IngressProcess.drop - 
+P4Runtime Write
+election_id {
+  low: 1
+}
+updates {
+  type: INSERT
+  entity {
+    table_entry {
+      table_id: 33607173
+      match {
+        field_id: 1
+        lpm {
+          value: "\000\000\000\000\001\001"
+          prefix_len: 48
+        }
+      }
+      action {
+        action {
+          action_id: 16788420
+          params {
+            param_id: 1
+            value: "\000\000\000\000\001\002"
+          }
+          params {
+            param_id: 2
+            value: "\000\002"
+          }
+        }
+      }
+    }
+  }
+}
+[07:43:44.841] [bmv2] [D] [thread 8203] Entry 0 added to table 'IngressProcess.arp_bcast'
+[07:43:44.841] [bmv2] [D] [thread 8203] Dumping entry 0
+Match key:
+* hdr.ethernet.srcAddr: LPM       000000000101/48
+Action entry: IngressProcess.pkt_fwd - 102,2,
+
+P4Runtime Write
+election_id {
+  low: 1
+}
+updates {
+  type: INSERT
+  entity {
+    table_entry {
+      table_id: 33611518
+      action {
+        action {
+          action_id: 16819739
+        }
+      }
+      is_default_action: true
+    }
+  }
+}
+[07:43:44.841] [bmv2] [D] [thread 8203] Set default entry for table 'IngressProcess.arp_cache': IngressProcess.drop - 
+P4Runtime Write
+election_id {
+  low: 1
+}
+updates {
+  type: INSERT
+  entity {
+    table_entry {
+      table_id: 33611518
+      match {
+        field_id: 1
+        lpm {
+          value: "\n\000\001\002"
+          prefix_len: 32
+        }
+      }
+      action {
+        action {
+          action_id: 16830033
+          params {
+            param_id: 1
+            value: "\000\000\000\000\001\002"
+          }
+          params {
+            param_id: 2
+            value: "\000\000\000\000\001\001"
+          }
+          params {
+            param_id: 3
+            value: "\000\001"
+          }
+        }
+      }
+    }
+  }
+}
+[07:43:44.842] [bmv2] [D] [thread 8203] Entry 0 added to table 'IngressProcess.arp_cache'
+[07:43:44.842] [bmv2] [D] [thread 8203] Dumping entry 0
+Match key:
+* hdr.arp.SPA         : LPM       0a000102/32
+Action entry: IngressProcess.pkt_check - 102,101,1,
+
+Connection removed
+[07:43:44.850] [bmv2] [D] [thread 8208] [16.0] [cxt 0] Processing packet received on port 3
+[07:43:44.850] [bmv2] [D] [thread 8208] [16.0] [cxt 0] Parser 'parser': start
+[07:43:44.850] [bmv2] [D] [thread 8208] [16.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:44.850] [bmv2] [D] [thread 8208] [16.0] [cxt 0] Extracting header 'ethernet'
+[07:43:44.850] [bmv2] [D] [thread 8208] [16.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:44.850] [bmv2] [T] [thread 8208] [16.0] [cxt 0] Bytes parsed: 14
+[07:43:44.850] [bmv2] [D] [thread 8208] [16.0] [cxt 0] Parser 'parser': end
+[07:43:44.850] [bmv2] [D] [thread 8208] [16.0] [cxt 0] Pipeline 'ingress': start
+[07:43:44.850] [bmv2] [T] [thread 8208] [16.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:44.850] [bmv2] [D] [thread 8208] [16.0] [cxt 0] Pipeline 'ingress': end
+[07:43:44.850] [bmv2] [D] [thread 8208] [16.0] [cxt 0] Egress port is 0
+[07:43:44.850] [bmv2] [D] [thread 8209] [16.0] [cxt 0] Pipeline 'egress': start
+[07:43:44.850] [bmv2] [D] [thread 8209] [16.0] [cxt 0] Pipeline 'egress': end
+[07:43:44.850] [bmv2] [D] [thread 8209] [16.0] [cxt 0] Deparser 'deparser': start
+[07:43:44.850] [bmv2] [D] [thread 8209] [16.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:44.850] [bmv2] [D] [thread 8209] [16.0] [cxt 0] Deparser 'deparser': end
+[07:43:44.850] [bmv2] [D] [thread 8213] [16.0] [cxt 0] Transmitting packet of size 208 out of port 0
+[07:43:44.964] [bmv2] [D] [thread 8208] [17.0] [cxt 0] Processing packet received on port 1
+[07:43:44.964] [bmv2] [D] [thread 8208] [17.0] [cxt 0] Parser 'parser': start
+[07:43:44.964] [bmv2] [D] [thread 8208] [17.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:44.964] [bmv2] [D] [thread 8208] [17.0] [cxt 0] Extracting header 'ethernet'
+[07:43:44.964] [bmv2] [D] [thread 8208] [17.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:44.964] [bmv2] [T] [thread 8208] [17.0] [cxt 0] Bytes parsed: 14
+[07:43:44.964] [bmv2] [D] [thread 8208] [17.0] [cxt 0] Parser 'parser': end
+[07:43:44.964] [bmv2] [D] [thread 8208] [17.0] [cxt 0] Pipeline 'ingress': start
+[07:43:44.964] [bmv2] [T] [thread 8208] [17.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:44.964] [bmv2] [D] [thread 8208] [17.0] [cxt 0] Pipeline 'ingress': end
+[07:43:44.964] [bmv2] [D] [thread 8208] [17.0] [cxt 0] Egress port is 0
+[07:43:44.964] [bmv2] [D] [thread 8209] [17.0] [cxt 0] Pipeline 'egress': start
+[07:43:44.964] [bmv2] [D] [thread 8209] [17.0] [cxt 0] Pipeline 'egress': end
+[07:43:44.964] [bmv2] [D] [thread 8209] [17.0] [cxt 0] Deparser 'deparser': start
+[07:43:44.964] [bmv2] [D] [thread 8209] [17.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:44.964] [bmv2] [D] [thread 8209] [17.0] [cxt 0] Deparser 'deparser': end
+[07:43:44.964] [bmv2] [D] [thread 8213] [17.0] [cxt 0] Transmitting packet of size 208 out of port 0
+[07:43:45.013] [bmv2] [D] [thread 8208] [18.0] [cxt 0] Processing packet received on port 2
+[07:43:45.013] [bmv2] [D] [thread 8208] [18.0] [cxt 0] Parser 'parser': start
+[07:43:45.013] [bmv2] [D] [thread 8208] [18.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:45.013] [bmv2] [D] [thread 8208] [18.0] [cxt 0] Extracting header 'ethernet'
+[07:43:45.013] [bmv2] [D] [thread 8208] [18.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:45.013] [bmv2] [T] [thread 8208] [18.0] [cxt 0] Bytes parsed: 14
+[07:43:45.014] [bmv2] [D] [thread 8208] [18.0] [cxt 0] Parser 'parser': end
+[07:43:45.014] [bmv2] [D] [thread 8208] [18.0] [cxt 0] Pipeline 'ingress': start
+[07:43:45.014] [bmv2] [T] [thread 8208] [18.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:45.014] [bmv2] [D] [thread 8208] [18.0] [cxt 0] Pipeline 'ingress': end
+[07:43:45.014] [bmv2] [D] [thread 8208] [18.0] [cxt 0] Egress port is 0
+[07:43:45.014] [bmv2] [D] [thread 8209] [18.0] [cxt 0] Pipeline 'egress': start
+[07:43:45.014] [bmv2] [D] [thread 8209] [18.0] [cxt 0] Pipeline 'egress': end
+[07:43:45.014] [bmv2] [D] [thread 8209] [18.0] [cxt 0] Deparser 'deparser': start
+[07:43:45.014] [bmv2] [D] [thread 8209] [18.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:45.014] [bmv2] [D] [thread 8209] [18.0] [cxt 0] Deparser 'deparser': end
+[07:43:45.014] [bmv2] [D] [thread 8213] [18.0] [cxt 0] Transmitting packet of size 110 out of port 0
+[07:43:45.050] [bmv2] [D] [thread 8208] [19.0] [cxt 0] Processing packet received on port 3
+[07:43:45.050] [bmv2] [D] [thread 8208] [19.0] [cxt 0] Parser 'parser': start
+[07:43:45.050] [bmv2] [D] [thread 8208] [19.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:45.050] [bmv2] [D] [thread 8208] [19.0] [cxt 0] Extracting header 'ethernet'
+[07:43:45.050] [bmv2] [D] [thread 8208] [19.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:45.050] [bmv2] [T] [thread 8208] [19.0] [cxt 0] Bytes parsed: 14
+[07:43:45.050] [bmv2] [D] [thread 8208] [19.0] [cxt 0] Parser 'parser': end
+[07:43:45.050] [bmv2] [D] [thread 8208] [19.0] [cxt 0] Pipeline 'ingress': start
+[07:43:45.050] [bmv2] [T] [thread 8208] [19.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:45.051] [bmv2] [D] [thread 8208] [19.0] [cxt 0] Pipeline 'ingress': end
+[07:43:45.051] [bmv2] [D] [thread 8208] [19.0] [cxt 0] Egress port is 0
+[07:43:45.051] [bmv2] [D] [thread 8209] [19.0] [cxt 0] Pipeline 'egress': start
+[07:43:45.051] [bmv2] [D] [thread 8209] [19.0] [cxt 0] Pipeline 'egress': end
+[07:43:45.051] [bmv2] [D] [thread 8209] [19.0] [cxt 0] Deparser 'deparser': start
+[07:43:45.051] [bmv2] [D] [thread 8209] [19.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:45.051] [bmv2] [D] [thread 8209] [19.0] [cxt 0] Deparser 'deparser': end
+[07:43:45.051] [bmv2] [D] [thread 8213] [19.0] [cxt 0] Transmitting packet of size 196 out of port 0
+[07:43:45.138] [bmv2] [D] [thread 8208] [20.0] [cxt 0] Processing packet received on port 1
+[07:43:45.138] [bmv2] [D] [thread 8208] [20.0] [cxt 0] Parser 'parser': start
+[07:43:45.138] [bmv2] [D] [thread 8208] [20.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:45.138] [bmv2] [D] [thread 8208] [20.0] [cxt 0] Extracting header 'ethernet'
+[07:43:45.138] [bmv2] [D] [thread 8208] [20.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:45.138] [bmv2] [T] [thread 8208] [20.0] [cxt 0] Bytes parsed: 14
+[07:43:45.138] [bmv2] [D] [thread 8208] [20.0] [cxt 0] Parser 'parser': end
+[07:43:45.138] [bmv2] [D] [thread 8208] [20.0] [cxt 0] Pipeline 'ingress': start
+[07:43:45.138] [bmv2] [T] [thread 8208] [20.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:45.138] [bmv2] [D] [thread 8208] [20.0] [cxt 0] Pipeline 'ingress': end
+[07:43:45.138] [bmv2] [D] [thread 8208] [20.0] [cxt 0] Egress port is 0
+[07:43:45.138] [bmv2] [D] [thread 8209] [20.0] [cxt 0] Pipeline 'egress': start
+[07:43:45.138] [bmv2] [D] [thread 8209] [20.0] [cxt 0] Pipeline 'egress': end
+[07:43:45.138] [bmv2] [D] [thread 8209] [20.0] [cxt 0] Deparser 'deparser': start
+[07:43:45.138] [bmv2] [D] [thread 8209] [20.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:45.138] [bmv2] [D] [thread 8209] [20.0] [cxt 0] Deparser 'deparser': end
+[07:43:45.138] [bmv2] [D] [thread 8213] [20.0] [cxt 0] Transmitting packet of size 110 out of port 0
+[07:43:45.167] [bmv2] [D] [thread 8208] [21.0] [cxt 0] Processing packet received on port 1
+[07:43:45.167] [bmv2] [D] [thread 8208] [21.0] [cxt 0] Parser 'parser': start
+[07:43:45.167] [bmv2] [D] [thread 8208] [21.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:45.167] [bmv2] [D] [thread 8208] [21.0] [cxt 0] Extracting header 'ethernet'
+[07:43:45.167] [bmv2] [D] [thread 8208] [21.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:45.167] [bmv2] [T] [thread 8208] [21.0] [cxt 0] Bytes parsed: 14
+[07:43:45.167] [bmv2] [D] [thread 8208] [21.0] [cxt 0] Parser 'parser': end
+[07:43:45.167] [bmv2] [D] [thread 8208] [21.0] [cxt 0] Pipeline 'ingress': start
+[07:43:45.167] [bmv2] [T] [thread 8208] [21.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:45.167] [bmv2] [D] [thread 8208] [21.0] [cxt 0] Pipeline 'ingress': end
+[07:43:45.167] [bmv2] [D] [thread 8208] [21.0] [cxt 0] Egress port is 0
+[07:43:45.167] [bmv2] [D] [thread 8209] [21.0] [cxt 0] Pipeline 'egress': start
+[07:43:45.167] [bmv2] [D] [thread 8209] [21.0] [cxt 0] Pipeline 'egress': end
+[07:43:45.167] [bmv2] [D] [thread 8209] [21.0] [cxt 0] Deparser 'deparser': start
+[07:43:45.167] [bmv2] [D] [thread 8209] [21.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:45.167] [bmv2] [D] [thread 8209] [21.0] [cxt 0] Deparser 'deparser': end
+[07:43:45.167] [bmv2] [D] [thread 8213] [21.0] [cxt 0] Transmitting packet of size 196 out of port 0
+[07:43:45.217] [bmv2] [D] [thread 8208] [22.0] [cxt 0] Processing packet received on port 3
+[07:43:45.217] [bmv2] [D] [thread 8208] [22.0] [cxt 0] Parser 'parser': start
+[07:43:45.218] [bmv2] [D] [thread 8208] [22.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:45.218] [bmv2] [D] [thread 8208] [22.0] [cxt 0] Extracting header 'ethernet'
+[07:43:45.218] [bmv2] [D] [thread 8208] [22.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:45.218] [bmv2] [T] [thread 8208] [22.0] [cxt 0] Bytes parsed: 14
+[07:43:45.218] [bmv2] [D] [thread 8208] [22.0] [cxt 0] Parser 'parser': end
+[07:43:45.218] [bmv2] [D] [thread 8208] [22.0] [cxt 0] Pipeline 'ingress': start
+[07:43:45.218] [bmv2] [T] [thread 8208] [22.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:45.218] [bmv2] [D] [thread 8208] [22.0] [cxt 0] Pipeline 'ingress': end
+[07:43:45.218] [bmv2] [D] [thread 8208] [22.0] [cxt 0] Egress port is 0
+[07:43:45.218] [bmv2] [D] [thread 8209] [22.0] [cxt 0] Pipeline 'egress': start
+[07:43:45.218] [bmv2] [D] [thread 8209] [22.0] [cxt 0] Pipeline 'egress': end
+[07:43:45.218] [bmv2] [D] [thread 8209] [22.0] [cxt 0] Deparser 'deparser': start
+[07:43:45.218] [bmv2] [D] [thread 8209] [22.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:45.218] [bmv2] [D] [thread 8209] [22.0] [cxt 0] Deparser 'deparser': end
+[07:43:45.218] [bmv2] [D] [thread 8213] [22.0] [cxt 0] Transmitting packet of size 203 out of port 0
+[07:43:45.278] [bmv2] [D] [thread 8208] [23.0] [cxt 0] Processing packet received on port 3
+[07:43:45.278] [bmv2] [D] [thread 8208] [23.0] [cxt 0] Parser 'parser': start
+[07:43:45.278] [bmv2] [D] [thread 8208] [23.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:45.278] [bmv2] [D] [thread 8208] [23.0] [cxt 0] Extracting header 'ethernet'
+[07:43:45.278] [bmv2] [D] [thread 8208] [23.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:45.278] [bmv2] [T] [thread 8208] [23.0] [cxt 0] Bytes parsed: 14
+[07:43:45.278] [bmv2] [D] [thread 8208] [23.0] [cxt 0] Parser 'parser': end
+[07:43:45.278] [bmv2] [D] [thread 8208] [23.0] [cxt 0] Pipeline 'ingress': start
+[07:43:45.278] [bmv2] [T] [thread 8208] [23.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:45.278] [bmv2] [D] [thread 8208] [23.0] [cxt 0] Pipeline 'ingress': end
+[07:43:45.278] [bmv2] [D] [thread 8208] [23.0] [cxt 0] Egress port is 0
+[07:43:45.278] [bmv2] [D] [thread 8209] [23.0] [cxt 0] Pipeline 'egress': start
+[07:43:45.278] [bmv2] [D] [thread 8209] [23.0] [cxt 0] Pipeline 'egress': end
+[07:43:45.278] [bmv2] [D] [thread 8209] [23.0] [cxt 0] Deparser 'deparser': start
+[07:43:45.278] [bmv2] [D] [thread 8209] [23.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:45.278] [bmv2] [D] [thread 8209] [23.0] [cxt 0] Deparser 'deparser': end
+[07:43:45.278] [bmv2] [D] [thread 8213] [23.0] [cxt 0] Transmitting packet of size 110 out of port 0
+[07:43:45.329] [bmv2] [D] [thread 8208] [24.0] [cxt 0] Processing packet received on port 1
+[07:43:45.329] [bmv2] [D] [thread 8208] [24.0] [cxt 0] Parser 'parser': start
+[07:43:45.329] [bmv2] [D] [thread 8208] [24.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:45.329] [bmv2] [D] [thread 8208] [24.0] [cxt 0] Extracting header 'ethernet'
+[07:43:45.329] [bmv2] [D] [thread 8208] [24.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:45.329] [bmv2] [T] [thread 8208] [24.0] [cxt 0] Bytes parsed: 14
+[07:43:45.329] [bmv2] [D] [thread 8208] [24.0] [cxt 0] Parser 'parser': end
+[07:43:45.329] [bmv2] [D] [thread 8208] [24.0] [cxt 0] Pipeline 'ingress': start
+[07:43:45.329] [bmv2] [T] [thread 8208] [24.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:45.329] [bmv2] [D] [thread 8208] [24.0] [cxt 0] Pipeline 'ingress': end
+[07:43:45.329] [bmv2] [D] [thread 8208] [24.0] [cxt 0] Egress port is 0
+[07:43:45.329] [bmv2] [D] [thread 8209] [24.0] [cxt 0] Pipeline 'egress': start
+[07:43:45.329] [bmv2] [D] [thread 8209] [24.0] [cxt 0] Pipeline 'egress': end
+[07:43:45.329] [bmv2] [D] [thread 8209] [24.0] [cxt 0] Deparser 'deparser': start
+[07:43:45.329] [bmv2] [D] [thread 8209] [24.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:45.329] [bmv2] [D] [thread 8209] [24.0] [cxt 0] Deparser 'deparser': end
+[07:43:45.329] [bmv2] [D] [thread 8213] [24.0] [cxt 0] Transmitting packet of size 203 out of port 0
+[07:43:46.234] [bmv2] [D] [thread 8208] [25.0] [cxt 0] Processing packet received on port 3
+[07:43:46.234] [bmv2] [D] [thread 8208] [25.0] [cxt 0] Parser 'parser': start
+[07:43:46.234] [bmv2] [D] [thread 8208] [25.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:46.234] [bmv2] [D] [thread 8208] [25.0] [cxt 0] Extracting header 'ethernet'
+[07:43:46.234] [bmv2] [D] [thread 8208] [25.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:46.234] [bmv2] [T] [thread 8208] [25.0] [cxt 0] Bytes parsed: 14
+[07:43:46.234] [bmv2] [D] [thread 8208] [25.0] [cxt 0] Parser 'parser': end
+[07:43:46.234] [bmv2] [D] [thread 8208] [25.0] [cxt 0] Pipeline 'ingress': start
+[07:43:46.234] [bmv2] [T] [thread 8208] [25.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:46.234] [bmv2] [D] [thread 8208] [25.0] [cxt 0] Pipeline 'ingress': end
+[07:43:46.234] [bmv2] [D] [thread 8208] [25.0] [cxt 0] Egress port is 0
+[07:43:46.234] [bmv2] [D] [thread 8209] [25.0] [cxt 0] Pipeline 'egress': start
+[07:43:46.234] [bmv2] [D] [thread 8209] [25.0] [cxt 0] Pipeline 'egress': end
+[07:43:46.234] [bmv2] [D] [thread 8209] [25.0] [cxt 0] Deparser 'deparser': start
+[07:43:46.234] [bmv2] [D] [thread 8209] [25.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:46.234] [bmv2] [D] [thread 8209] [25.0] [cxt 0] Deparser 'deparser': end
+[07:43:46.234] [bmv2] [D] [thread 8213] [25.0] [cxt 0] Transmitting packet of size 196 out of port 0
+[07:43:46.349] [bmv2] [D] [thread 8208] [26.0] [cxt 0] Processing packet received on port 1
+[07:43:46.349] [bmv2] [D] [thread 8208] [26.0] [cxt 0] Parser 'parser': start
+[07:43:46.349] [bmv2] [D] [thread 8208] [26.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:46.349] [bmv2] [D] [thread 8208] [26.0] [cxt 0] Extracting header 'ethernet'
+[07:43:46.349] [bmv2] [D] [thread 8208] [26.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:46.349] [bmv2] [T] [thread 8208] [26.0] [cxt 0] Bytes parsed: 14
+[07:43:46.349] [bmv2] [D] [thread 8208] [26.0] [cxt 0] Parser 'parser': end
+[07:43:46.349] [bmv2] [D] [thread 8208] [26.0] [cxt 0] Pipeline 'ingress': start
+[07:43:46.349] [bmv2] [T] [thread 8208] [26.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:46.349] [bmv2] [D] [thread 8208] [26.0] [cxt 0] Pipeline 'ingress': end
+[07:43:46.349] [bmv2] [D] [thread 8208] [26.0] [cxt 0] Egress port is 0
+[07:43:46.349] [bmv2] [D] [thread 8209] [26.0] [cxt 0] Pipeline 'egress': start
+[07:43:46.349] [bmv2] [D] [thread 8209] [26.0] [cxt 0] Pipeline 'egress': end
+[07:43:46.349] [bmv2] [D] [thread 8209] [26.0] [cxt 0] Deparser 'deparser': start
+[07:43:46.349] [bmv2] [D] [thread 8209] [26.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:46.349] [bmv2] [D] [thread 8209] [26.0] [cxt 0] Deparser 'deparser': end
+[07:43:46.349] [bmv2] [D] [thread 8213] [26.0] [cxt 0] Transmitting packet of size 196 out of port 0
+[07:43:47.221] [bmv2] [D] [thread 8208] [27.0] [cxt 0] Processing packet received on port 3
+[07:43:47.221] [bmv2] [D] [thread 8208] [27.0] [cxt 0] Parser 'parser': start
+[07:43:47.221] [bmv2] [D] [thread 8208] [27.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:47.221] [bmv2] [D] [thread 8208] [27.0] [cxt 0] Extracting header 'ethernet'
+[07:43:47.221] [bmv2] [D] [thread 8208] [27.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:47.221] [bmv2] [T] [thread 8208] [27.0] [cxt 0] Bytes parsed: 14
+[07:43:47.221] [bmv2] [D] [thread 8208] [27.0] [cxt 0] Parser 'parser': end
+[07:43:47.221] [bmv2] [D] [thread 8208] [27.0] [cxt 0] Pipeline 'ingress': start
+[07:43:47.221] [bmv2] [T] [thread 8208] [27.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:47.221] [bmv2] [D] [thread 8208] [27.0] [cxt 0] Pipeline 'ingress': end
+[07:43:47.221] [bmv2] [D] [thread 8208] [27.0] [cxt 0] Egress port is 0
+[07:43:47.221] [bmv2] [D] [thread 8209] [27.0] [cxt 0] Pipeline 'egress': start
+[07:43:47.221] [bmv2] [D] [thread 8209] [27.0] [cxt 0] Pipeline 'egress': end
+[07:43:47.221] [bmv2] [D] [thread 8209] [27.0] [cxt 0] Deparser 'deparser': start
+[07:43:47.221] [bmv2] [D] [thread 8209] [27.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:47.221] [bmv2] [D] [thread 8209] [27.0] [cxt 0] Deparser 'deparser': end
+[07:43:47.221] [bmv2] [D] [thread 8213] [27.0] [cxt 0] Transmitting packet of size 203 out of port 0
+[07:43:47.329] [bmv2] [D] [thread 8208] [28.0] [cxt 0] Processing packet received on port 1
+[07:43:47.329] [bmv2] [D] [thread 8208] [28.0] [cxt 0] Parser 'parser': start
+[07:43:47.329] [bmv2] [D] [thread 8208] [28.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:47.329] [bmv2] [D] [thread 8208] [28.0] [cxt 0] Extracting header 'ethernet'
+[07:43:47.329] [bmv2] [D] [thread 8208] [28.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:47.329] [bmv2] [T] [thread 8208] [28.0] [cxt 0] Bytes parsed: 14
+[07:43:47.329] [bmv2] [D] [thread 8208] [28.0] [cxt 0] Parser 'parser': end
+[07:43:47.329] [bmv2] [D] [thread 8208] [28.0] [cxt 0] Pipeline 'ingress': start
+[07:43:47.329] [bmv2] [T] [thread 8208] [28.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:47.329] [bmv2] [D] [thread 8208] [28.0] [cxt 0] Pipeline 'ingress': end
+[07:43:47.329] [bmv2] [D] [thread 8208] [28.0] [cxt 0] Egress port is 0
+[07:43:47.329] [bmv2] [D] [thread 8209] [28.0] [cxt 0] Pipeline 'egress': start
+[07:43:47.329] [bmv2] [D] [thread 8209] [28.0] [cxt 0] Pipeline 'egress': end
+[07:43:47.329] [bmv2] [D] [thread 8209] [28.0] [cxt 0] Deparser 'deparser': start
+[07:43:47.330] [bmv2] [D] [thread 8209] [28.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:47.330] [bmv2] [D] [thread 8209] [28.0] [cxt 0] Deparser 'deparser': end
+[07:43:47.330] [bmv2] [D] [thread 8213] [28.0] [cxt 0] Transmitting packet of size 203 out of port 0
+[07:43:48.119] [bmv2] [D] [thread 8208] [29.0] [cxt 0] Processing packet received on port 3
+[07:43:48.119] [bmv2] [D] [thread 8208] [29.0] [cxt 0] Parser 'parser': start
+[07:43:48.119] [bmv2] [D] [thread 8208] [29.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:48.119] [bmv2] [D] [thread 8208] [29.0] [cxt 0] Extracting header 'ethernet'
+[07:43:48.120] [bmv2] [D] [thread 8208] [29.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:48.120] [bmv2] [T] [thread 8208] [29.0] [cxt 0] Bytes parsed: 14
+[07:43:48.120] [bmv2] [D] [thread 8208] [29.0] [cxt 0] Parser 'parser': end
+[07:43:48.120] [bmv2] [D] [thread 8208] [29.0] [cxt 0] Pipeline 'ingress': start
+[07:43:48.120] [bmv2] [T] [thread 8208] [29.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:48.120] [bmv2] [D] [thread 8208] [29.0] [cxt 0] Pipeline 'ingress': end
+[07:43:48.120] [bmv2] [D] [thread 8208] [29.0] [cxt 0] Egress port is 0
+[07:43:48.120] [bmv2] [D] [thread 8209] [29.0] [cxt 0] Pipeline 'egress': start
+[07:43:48.120] [bmv2] [D] [thread 8209] [29.0] [cxt 0] Pipeline 'egress': end
+[07:43:48.120] [bmv2] [D] [thread 8209] [29.0] [cxt 0] Deparser 'deparser': start
+[07:43:48.120] [bmv2] [D] [thread 8209] [29.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:48.120] [bmv2] [D] [thread 8209] [29.0] [cxt 0] Deparser 'deparser': end
+[07:43:48.120] [bmv2] [D] [thread 8213] [29.0] [cxt 0] Transmitting packet of size 70 out of port 0
+[07:43:48.230] [bmv2] [D] [thread 8208] [30.0] [cxt 0] Processing packet received on port 1
+[07:43:48.230] [bmv2] [D] [thread 8208] [30.0] [cxt 0] Parser 'parser': start
+[07:43:48.230] [bmv2] [D] [thread 8208] [30.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:48.230] [bmv2] [D] [thread 8208] [30.0] [cxt 0] Extracting header 'ethernet'
+[07:43:48.231] [bmv2] [D] [thread 8208] [30.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:48.231] [bmv2] [T] [thread 8208] [30.0] [cxt 0] Bytes parsed: 14
+[07:43:48.231] [bmv2] [D] [thread 8208] [30.0] [cxt 0] Parser 'parser': end
+[07:43:48.231] [bmv2] [D] [thread 8208] [30.0] [cxt 0] Pipeline 'ingress': start
+[07:43:48.231] [bmv2] [T] [thread 8208] [30.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:48.231] [bmv2] [D] [thread 8208] [30.0] [cxt 0] Pipeline 'ingress': end
+[07:43:48.231] [bmv2] [D] [thread 8208] [30.0] [cxt 0] Egress port is 0
+[07:43:48.231] [bmv2] [D] [thread 8209] [30.0] [cxt 0] Pipeline 'egress': start
+[07:43:48.231] [bmv2] [D] [thread 8209] [30.0] [cxt 0] Pipeline 'egress': end
+[07:43:48.231] [bmv2] [D] [thread 8209] [30.0] [cxt 0] Deparser 'deparser': start
+[07:43:48.231] [bmv2] [D] [thread 8209] [30.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:48.231] [bmv2] [D] [thread 8209] [30.0] [cxt 0] Deparser 'deparser': end
+[07:43:48.231] [bmv2] [D] [thread 8213] [30.0] [cxt 0] Transmitting packet of size 70 out of port 0
+[07:43:48.416] [bmv2] [D] [thread 8208] [31.0] [cxt 0] Processing packet received on port 3
+[07:43:48.416] [bmv2] [D] [thread 8208] [31.0] [cxt 0] Parser 'parser': start
+[07:43:48.416] [bmv2] [D] [thread 8208] [31.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:48.416] [bmv2] [D] [thread 8208] [31.0] [cxt 0] Extracting header 'ethernet'
+[07:43:48.416] [bmv2] [D] [thread 8208] [31.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:48.416] [bmv2] [T] [thread 8208] [31.0] [cxt 0] Bytes parsed: 14
+[07:43:48.416] [bmv2] [D] [thread 8208] [31.0] [cxt 0] Parser 'parser': end
+[07:43:48.416] [bmv2] [D] [thread 8208] [31.0] [cxt 0] Pipeline 'ingress': start
+[07:43:48.416] [bmv2] [T] [thread 8208] [31.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:48.416] [bmv2] [D] [thread 8208] [31.0] [cxt 0] Pipeline 'ingress': end
+[07:43:48.416] [bmv2] [D] [thread 8208] [31.0] [cxt 0] Egress port is 0
+[07:43:48.416] [bmv2] [D] [thread 8209] [31.0] [cxt 0] Pipeline 'egress': start
+[07:43:48.416] [bmv2] [D] [thread 8209] [31.0] [cxt 0] Pipeline 'egress': end
+[07:43:48.416] [bmv2] [D] [thread 8209] [31.0] [cxt 0] Deparser 'deparser': start
+[07:43:48.416] [bmv2] [D] [thread 8209] [31.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:48.416] [bmv2] [D] [thread 8209] [31.0] [cxt 0] Deparser 'deparser': end
+[07:43:48.416] [bmv2] [D] [thread 8213] [31.0] [cxt 0] Transmitting packet of size 196 out of port 0
+[07:43:48.530] [bmv2] [D] [thread 8208] [32.0] [cxt 0] Processing packet received on port 1
+[07:43:48.530] [bmv2] [D] [thread 8208] [32.0] [cxt 0] Parser 'parser': start
+[07:43:48.530] [bmv2] [D] [thread 8208] [32.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:48.530] [bmv2] [D] [thread 8208] [32.0] [cxt 0] Extracting header 'ethernet'
+[07:43:48.530] [bmv2] [D] [thread 8208] [32.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:48.530] [bmv2] [T] [thread 8208] [32.0] [cxt 0] Bytes parsed: 14
+[07:43:48.530] [bmv2] [D] [thread 8208] [32.0] [cxt 0] Parser 'parser': end
+[07:43:48.530] [bmv2] [D] [thread 8208] [32.0] [cxt 0] Pipeline 'ingress': start
+[07:43:48.530] [bmv2] [T] [thread 8208] [32.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:48.530] [bmv2] [D] [thread 8208] [32.0] [cxt 0] Pipeline 'ingress': end
+[07:43:48.530] [bmv2] [D] [thread 8208] [32.0] [cxt 0] Egress port is 0
+[07:43:48.531] [bmv2] [D] [thread 8209] [32.0] [cxt 0] Pipeline 'egress': start
+[07:43:48.531] [bmv2] [D] [thread 8209] [32.0] [cxt 0] Pipeline 'egress': end
+[07:43:48.531] [bmv2] [D] [thread 8209] [32.0] [cxt 0] Deparser 'deparser': start
+[07:43:48.531] [bmv2] [D] [thread 8209] [32.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:48.531] [bmv2] [D] [thread 8209] [32.0] [cxt 0] Deparser 'deparser': end
+[07:43:48.531] [bmv2] [D] [thread 8213] [32.0] [cxt 0] Transmitting packet of size 196 out of port 0
+[07:43:51.223] [bmv2] [D] [thread 8208] [33.0] [cxt 0] Processing packet received on port 3
+[07:43:51.223] [bmv2] [D] [thread 8208] [33.0] [cxt 0] Parser 'parser': start
+[07:43:51.223] [bmv2] [D] [thread 8208] [33.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:51.223] [bmv2] [D] [thread 8208] [33.0] [cxt 0] Extracting header 'ethernet'
+[07:43:51.223] [bmv2] [D] [thread 8208] [33.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:51.223] [bmv2] [T] [thread 8208] [33.0] [cxt 0] Bytes parsed: 14
+[07:43:51.223] [bmv2] [D] [thread 8208] [33.0] [cxt 0] Parser 'parser': end
+[07:43:51.223] [bmv2] [D] [thread 8208] [33.0] [cxt 0] Pipeline 'ingress': start
+[07:43:51.223] [bmv2] [T] [thread 8208] [33.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:51.223] [bmv2] [D] [thread 8208] [33.0] [cxt 0] Pipeline 'ingress': end
+[07:43:51.223] [bmv2] [D] [thread 8208] [33.0] [cxt 0] Egress port is 0
+[07:43:51.223] [bmv2] [D] [thread 8209] [33.0] [cxt 0] Pipeline 'egress': start
+[07:43:51.223] [bmv2] [D] [thread 8209] [33.0] [cxt 0] Pipeline 'egress': end
+[07:43:51.223] [bmv2] [D] [thread 8209] [33.0] [cxt 0] Deparser 'deparser': start
+[07:43:51.223] [bmv2] [D] [thread 8209] [33.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:51.223] [bmv2] [D] [thread 8209] [33.0] [cxt 0] Deparser 'deparser': end
+[07:43:51.223] [bmv2] [D] [thread 8213] [33.0] [cxt 0] Transmitting packet of size 203 out of port 0
+[07:43:51.330] [bmv2] [D] [thread 8208] [34.0] [cxt 0] Processing packet received on port 1
+[07:43:51.330] [bmv2] [D] [thread 8208] [34.0] [cxt 0] Parser 'parser': start
+[07:43:51.330] [bmv2] [D] [thread 8208] [34.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:51.330] [bmv2] [D] [thread 8208] [34.0] [cxt 0] Extracting header 'ethernet'
+[07:43:51.331] [bmv2] [D] [thread 8208] [34.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:51.331] [bmv2] [T] [thread 8208] [34.0] [cxt 0] Bytes parsed: 14
+[07:43:51.331] [bmv2] [D] [thread 8208] [34.0] [cxt 0] Parser 'parser': end
+[07:43:51.331] [bmv2] [D] [thread 8208] [34.0] [cxt 0] Pipeline 'ingress': start
+[07:43:51.331] [bmv2] [T] [thread 8208] [34.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:51.331] [bmv2] [D] [thread 8208] [34.0] [cxt 0] Pipeline 'ingress': end
+[07:43:51.331] [bmv2] [D] [thread 8208] [34.0] [cxt 0] Egress port is 0
+[07:43:51.331] [bmv2] [D] [thread 8209] [34.0] [cxt 0] Pipeline 'egress': start
+[07:43:51.331] [bmv2] [D] [thread 8209] [34.0] [cxt 0] Pipeline 'egress': end
+[07:43:51.331] [bmv2] [D] [thread 8209] [34.0] [cxt 0] Deparser 'deparser': start
+[07:43:51.331] [bmv2] [D] [thread 8209] [34.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:51.331] [bmv2] [D] [thread 8209] [34.0] [cxt 0] Deparser 'deparser': end
+[07:43:51.331] [bmv2] [D] [thread 8213] [34.0] [cxt 0] Transmitting packet of size 203 out of port 0
+[07:43:52.126] [bmv2] [D] [thread 8208] [35.0] [cxt 0] Processing packet received on port 3
+[07:43:52.126] [bmv2] [D] [thread 8208] [35.0] [cxt 0] Parser 'parser': start
+[07:43:52.126] [bmv2] [D] [thread 8208] [35.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:52.126] [bmv2] [D] [thread 8208] [35.0] [cxt 0] Extracting header 'ethernet'
+[07:43:52.126] [bmv2] [D] [thread 8208] [35.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:52.126] [bmv2] [T] [thread 8208] [35.0] [cxt 0] Bytes parsed: 14
+[07:43:52.126] [bmv2] [D] [thread 8208] [35.0] [cxt 0] Parser 'parser': end
+[07:43:52.126] [bmv2] [D] [thread 8208] [35.0] [cxt 0] Pipeline 'ingress': start
+[07:43:52.126] [bmv2] [T] [thread 8208] [35.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:52.126] [bmv2] [D] [thread 8208] [35.0] [cxt 0] Pipeline 'ingress': end
+[07:43:52.126] [bmv2] [D] [thread 8208] [35.0] [cxt 0] Egress port is 0
+[07:43:52.127] [bmv2] [D] [thread 8209] [35.0] [cxt 0] Pipeline 'egress': start
+[07:43:52.127] [bmv2] [D] [thread 8209] [35.0] [cxt 0] Pipeline 'egress': end
+[07:43:52.127] [bmv2] [D] [thread 8209] [35.0] [cxt 0] Deparser 'deparser': start
+[07:43:52.127] [bmv2] [D] [thread 8209] [35.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:52.127] [bmv2] [D] [thread 8209] [35.0] [cxt 0] Deparser 'deparser': end
+[07:43:52.127] [bmv2] [D] [thread 8213] [35.0] [cxt 0] Transmitting packet of size 70 out of port 0
+[07:43:52.240] [bmv2] [D] [thread 8208] [36.0] [cxt 0] Processing packet received on port 1
+[07:43:52.240] [bmv2] [D] [thread 8208] [36.0] [cxt 0] Parser 'parser': start
+[07:43:52.240] [bmv2] [D] [thread 8208] [36.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:52.240] [bmv2] [D] [thread 8208] [36.0] [cxt 0] Extracting header 'ethernet'
+[07:43:52.240] [bmv2] [D] [thread 8208] [36.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:52.240] [bmv2] [T] [thread 8208] [36.0] [cxt 0] Bytes parsed: 14
+[07:43:52.240] [bmv2] [D] [thread 8208] [36.0] [cxt 0] Parser 'parser': end
+[07:43:52.240] [bmv2] [D] [thread 8208] [36.0] [cxt 0] Pipeline 'ingress': start
+[07:43:52.240] [bmv2] [T] [thread 8208] [36.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:52.240] [bmv2] [D] [thread 8208] [36.0] [cxt 0] Pipeline 'ingress': end
+[07:43:52.240] [bmv2] [D] [thread 8208] [36.0] [cxt 0] Egress port is 0
+[07:43:52.241] [bmv2] [D] [thread 8209] [36.0] [cxt 0] Pipeline 'egress': start
+[07:43:52.241] [bmv2] [D] [thread 8209] [36.0] [cxt 0] Pipeline 'egress': end
+[07:43:52.241] [bmv2] [D] [thread 8209] [36.0] [cxt 0] Deparser 'deparser': start
+[07:43:52.241] [bmv2] [D] [thread 8209] [36.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:52.241] [bmv2] [D] [thread 8209] [36.0] [cxt 0] Deparser 'deparser': end
+[07:43:52.241] [bmv2] [D] [thread 8213] [36.0] [cxt 0] Transmitting packet of size 70 out of port 0
+[07:43:59.224] [bmv2] [D] [thread 8208] [37.0] [cxt 0] Processing packet received on port 3
+[07:43:59.224] [bmv2] [D] [thread 8208] [37.0] [cxt 0] Parser 'parser': start
+[07:43:59.224] [bmv2] [D] [thread 8208] [37.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:59.224] [bmv2] [D] [thread 8208] [37.0] [cxt 0] Extracting header 'ethernet'
+[07:43:59.224] [bmv2] [D] [thread 8208] [37.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:59.224] [bmv2] [T] [thread 8208] [37.0] [cxt 0] Bytes parsed: 14
+[07:43:59.224] [bmv2] [D] [thread 8208] [37.0] [cxt 0] Parser 'parser': end
+[07:43:59.224] [bmv2] [D] [thread 8208] [37.0] [cxt 0] Pipeline 'ingress': start
+[07:43:59.224] [bmv2] [T] [thread 8208] [37.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:59.224] [bmv2] [D] [thread 8208] [37.0] [cxt 0] Pipeline 'ingress': end
+[07:43:59.224] [bmv2] [D] [thread 8208] [37.0] [cxt 0] Egress port is 0
+[07:43:59.225] [bmv2] [D] [thread 8209] [37.0] [cxt 0] Pipeline 'egress': start
+[07:43:59.225] [bmv2] [D] [thread 8209] [37.0] [cxt 0] Pipeline 'egress': end
+[07:43:59.225] [bmv2] [D] [thread 8209] [37.0] [cxt 0] Deparser 'deparser': start
+[07:43:59.225] [bmv2] [D] [thread 8209] [37.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:59.225] [bmv2] [D] [thread 8209] [37.0] [cxt 0] Deparser 'deparser': end
+[07:43:59.225] [bmv2] [D] [thread 8213] [37.0] [cxt 0] Transmitting packet of size 203 out of port 0
+[07:43:59.335] [bmv2] [D] [thread 8208] [38.0] [cxt 0] Processing packet received on port 1
+[07:43:59.335] [bmv2] [D] [thread 8208] [38.0] [cxt 0] Parser 'parser': start
+[07:43:59.335] [bmv2] [D] [thread 8208] [38.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:43:59.335] [bmv2] [D] [thread 8208] [38.0] [cxt 0] Extracting header 'ethernet'
+[07:43:59.335] [bmv2] [D] [thread 8208] [38.0] [cxt 0] Parser state 'start': key is 86dd
+[07:43:59.335] [bmv2] [T] [thread 8208] [38.0] [cxt 0] Bytes parsed: 14
+[07:43:59.335] [bmv2] [D] [thread 8208] [38.0] [cxt 0] Parser 'parser': end
+[07:43:59.335] [bmv2] [D] [thread 8208] [38.0] [cxt 0] Pipeline 'ingress': start
+[07:43:59.335] [bmv2] [T] [thread 8208] [38.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:43:59.335] [bmv2] [D] [thread 8208] [38.0] [cxt 0] Pipeline 'ingress': end
+[07:43:59.335] [bmv2] [D] [thread 8208] [38.0] [cxt 0] Egress port is 0
+[07:43:59.336] [bmv2] [D] [thread 8209] [38.0] [cxt 0] Pipeline 'egress': start
+[07:43:59.336] [bmv2] [D] [thread 8209] [38.0] [cxt 0] Pipeline 'egress': end
+[07:43:59.336] [bmv2] [D] [thread 8209] [38.0] [cxt 0] Deparser 'deparser': start
+[07:43:59.336] [bmv2] [D] [thread 8209] [38.0] [cxt 0] Deparsing header 'ethernet'
+[07:43:59.336] [bmv2] [D] [thread 8209] [38.0] [cxt 0] Deparser 'deparser': end
+[07:43:59.336] [bmv2] [D] [thread 8213] [38.0] [cxt 0] Transmitting packet of size 203 out of port 0
+[07:44:15.250] [bmv2] [D] [thread 8208] [39.0] [cxt 0] Processing packet received on port 3
+[07:44:15.250] [bmv2] [D] [thread 8208] [39.0] [cxt 0] Parser 'parser': start
+[07:44:15.250] [bmv2] [D] [thread 8208] [39.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:44:15.250] [bmv2] [D] [thread 8208] [39.0] [cxt 0] Extracting header 'ethernet'
+[07:44:15.250] [bmv2] [D] [thread 8208] [39.0] [cxt 0] Parser state 'start': key is 86dd
+[07:44:15.250] [bmv2] [T] [thread 8208] [39.0] [cxt 0] Bytes parsed: 14
+[07:44:15.250] [bmv2] [D] [thread 8208] [39.0] [cxt 0] Parser 'parser': end
+[07:44:15.250] [bmv2] [D] [thread 8208] [39.0] [cxt 0] Pipeline 'ingress': start
+[07:44:15.250] [bmv2] [T] [thread 8208] [39.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:44:15.250] [bmv2] [D] [thread 8208] [39.0] [cxt 0] Pipeline 'ingress': end
+[07:44:15.250] [bmv2] [D] [thread 8208] [39.0] [cxt 0] Egress port is 0
+[07:44:15.250] [bmv2] [D] [thread 8209] [39.0] [cxt 0] Pipeline 'egress': start
+[07:44:15.250] [bmv2] [D] [thread 8209] [39.0] [cxt 0] Pipeline 'egress': end
+[07:44:15.250] [bmv2] [D] [thread 8209] [39.0] [cxt 0] Deparser 'deparser': start
+[07:44:15.250] [bmv2] [D] [thread 8209] [39.0] [cxt 0] Deparsing header 'ethernet'
+[07:44:15.250] [bmv2] [D] [thread 8209] [39.0] [cxt 0] Deparser 'deparser': end
+[07:44:15.250] [bmv2] [D] [thread 8213] [39.0] [cxt 0] Transmitting packet of size 203 out of port 0
+[07:44:15.333] [bmv2] [D] [thread 8208] [40.0] [cxt 0] Processing packet received on port 1
+[07:44:15.333] [bmv2] [D] [thread 8208] [40.0] [cxt 0] Parser 'parser': start
+[07:44:15.333] [bmv2] [D] [thread 8208] [40.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:44:15.333] [bmv2] [D] [thread 8208] [40.0] [cxt 0] Extracting header 'ethernet'
+[07:44:15.333] [bmv2] [D] [thread 8208] [40.0] [cxt 0] Parser state 'start': key is 86dd
+[07:44:15.333] [bmv2] [T] [thread 8208] [40.0] [cxt 0] Bytes parsed: 14
+[07:44:15.333] [bmv2] [D] [thread 8208] [40.0] [cxt 0] Parser 'parser': end
+[07:44:15.333] [bmv2] [D] [thread 8208] [40.0] [cxt 0] Pipeline 'ingress': start
+[07:44:15.333] [bmv2] [T] [thread 8208] [40.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is false
+[07:44:15.333] [bmv2] [D] [thread 8208] [40.0] [cxt 0] Pipeline 'ingress': end
+[07:44:15.333] [bmv2] [D] [thread 8208] [40.0] [cxt 0] Egress port is 0
+[07:44:15.333] [bmv2] [D] [thread 8209] [40.0] [cxt 0] Pipeline 'egress': start
+[07:44:15.333] [bmv2] [D] [thread 8209] [40.0] [cxt 0] Pipeline 'egress': end
+[07:44:15.334] [bmv2] [D] [thread 8209] [40.0] [cxt 0] Deparser 'deparser': start
+[07:44:15.334] [bmv2] [D] [thread 8209] [40.0] [cxt 0] Deparsing header 'ethernet'
+[07:44:15.334] [bmv2] [D] [thread 8209] [40.0] [cxt 0] Deparser 'deparser': end
+[07:44:15.334] [bmv2] [D] [thread 8213] [40.0] [cxt 0] Transmitting packet of size 203 out of port 0
+[07:44:24.650] [bmv2] [D] [thread 8208] [41.0] [cxt 0] Processing packet received on port 1
+[07:44:24.650] [bmv2] [D] [thread 8208] [41.0] [cxt 0] Parser 'parser': start
+[07:44:24.650] [bmv2] [D] [thread 8208] [41.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:44:24.650] [bmv2] [D] [thread 8208] [41.0] [cxt 0] Extracting header 'ethernet'
+[07:44:24.650] [bmv2] [D] [thread 8208] [41.0] [cxt 0] Parser state 'start': key is 0806
+[07:44:24.650] [bmv2] [T] [thread 8208] [41.0] [cxt 0] Bytes parsed: 14
+[07:44:24.650] [bmv2] [D] [thread 8208] [41.0] [cxt 0] Parser 'parser' entering state 'parse_arp'
+[07:44:24.650] [bmv2] [D] [thread 8208] [41.0] [cxt 0] Extracting header 'arp'
+[07:44:24.650] [bmv2] [D] [thread 8208] [41.0] [cxt 0] Parser state 'parse_arp' has no switch, going to default next state
+[07:44:24.650] [bmv2] [T] [thread 8208] [41.0] [cxt 0] Bytes parsed: 42
+[07:44:24.650] [bmv2] [D] [thread 8208] [41.0] [cxt 0] Parser 'parser': end
+[07:44:24.650] [bmv2] [D] [thread 8208] [41.0] [cxt 0] Pipeline 'ingress': start
+[07:44:24.650] [bmv2] [T] [thread 8208] [41.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is true
+[07:44:24.650] [bmv2] [T] [thread 8208] [41.0] [cxt 0] dynamic-arp-inspection.p4(124) Condition "hdr.arp.oper == 1" (node_3) is true
+[07:44:24.650] [bmv2] [T] [thread 8208] [41.0] [cxt 0] Applying table 'IngressProcess.arp_bcast'
+[07:44:24.650] [bmv2] [D] [thread 8208] [41.0] [cxt 0] Looking up key:
+* hdr.ethernet.srcAddr: 000000000101
+
+[07:44:24.650] [bmv2] [D] [thread 8208] [41.0] [cxt 0] Table 'IngressProcess.arp_bcast': hit with handle 0
+[07:44:24.650] [bmv2] [D] [thread 8208] [41.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ethernet.srcAddr: LPM       000000000101/48
+Action entry: IngressProcess.pkt_fwd - 102,2,
+
+[07:44:24.650] [bmv2] [D] [thread 8208] [41.0] [cxt 0] Action entry is IngressProcess.pkt_fwd - 102,2,
+[07:44:24.650] [bmv2] [T] [thread 8208] [41.0] [cxt 0] Action IngressProcess.pkt_fwd
+[07:44:24.650] [bmv2] [T] [thread 8208] [41.0] [cxt 0] dynamic-arp-inspection.p4(88) Primitive standard_metadata.egress_spec = port
+[07:44:24.650] [bmv2] [T] [thread 8208] [41.0] [cxt 0] dynamic-arp-inspection.p4(89) Primitive hdr.ethernet.dstAddr = dstAddr
+[07:44:24.650] [bmv2] [T] [thread 8208] [41.0] [cxt 0] dynamic-arp-inspection.p4(128) Condition "hdr.arp.oper == 2" (node_5) is false
+[07:44:24.650] [bmv2] [D] [thread 8208] [41.0] [cxt 0] Pipeline 'ingress': end
+[07:44:24.650] [bmv2] [D] [thread 8208] [41.0] [cxt 0] Egress port is 2
+[07:44:24.650] [bmv2] [D] [thread 8211] [41.0] [cxt 0] Pipeline 'egress': start
+[07:44:24.650] [bmv2] [D] [thread 8211] [41.0] [cxt 0] Pipeline 'egress': end
+[07:44:24.650] [bmv2] [D] [thread 8211] [41.0] [cxt 0] Deparser 'deparser': start
+[07:44:24.650] [bmv2] [D] [thread 8211] [41.0] [cxt 0] Deparsing header 'ethernet'
+[07:44:24.650] [bmv2] [D] [thread 8211] [41.0] [cxt 0] Deparsing header 'arp'
+[07:44:24.650] [bmv2] [D] [thread 8211] [41.0] [cxt 0] Deparser 'deparser': end
+[07:44:24.650] [bmv2] [D] [thread 8213] [41.0] [cxt 0] Transmitting packet of size 42 out of port 2
+[07:44:24.662] [bmv2] [D] [thread 8208] [42.0] [cxt 0] Processing packet received on port 2
+[07:44:24.662] [bmv2] [D] [thread 8208] [42.0] [cxt 0] Parser 'parser': start
+[07:44:24.662] [bmv2] [D] [thread 8208] [42.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:44:24.662] [bmv2] [D] [thread 8208] [42.0] [cxt 0] Extracting header 'ethernet'
+[07:44:24.662] [bmv2] [D] [thread 8208] [42.0] [cxt 0] Parser state 'start': key is 0806
+[07:44:24.662] [bmv2] [T] [thread 8208] [42.0] [cxt 0] Bytes parsed: 14
+[07:44:24.662] [bmv2] [D] [thread 8208] [42.0] [cxt 0] Parser 'parser' entering state 'parse_arp'
+[07:44:24.662] [bmv2] [D] [thread 8208] [42.0] [cxt 0] Extracting header 'arp'
+[07:44:24.662] [bmv2] [D] [thread 8208] [42.0] [cxt 0] Parser state 'parse_arp' has no switch, going to default next state
+[07:44:24.662] [bmv2] [T] [thread 8208] [42.0] [cxt 0] Bytes parsed: 42
+[07:44:24.662] [bmv2] [D] [thread 8208] [42.0] [cxt 0] Parser 'parser': end
+[07:44:24.662] [bmv2] [D] [thread 8208] [42.0] [cxt 0] Pipeline 'ingress': start
+[07:44:24.662] [bmv2] [T] [thread 8208] [42.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is true
+[07:44:24.662] [bmv2] [T] [thread 8208] [42.0] [cxt 0] dynamic-arp-inspection.p4(124) Condition "hdr.arp.oper == 1" (node_3) is false
+[07:44:24.662] [bmv2] [T] [thread 8208] [42.0] [cxt 0] dynamic-arp-inspection.p4(128) Condition "hdr.arp.oper == 2" (node_5) is true
+[07:44:24.662] [bmv2] [T] [thread 8208] [42.0] [cxt 0] Applying table 'IngressProcess.arp_cache'
+[07:44:24.662] [bmv2] [D] [thread 8208] [42.0] [cxt 0] Looking up key:
+* hdr.arp.SPA         : 0a000102
+
+[07:44:24.662] [bmv2] [D] [thread 8208] [42.0] [cxt 0] Table 'IngressProcess.arp_cache': hit with handle 0
+[07:44:24.662] [bmv2] [D] [thread 8208] [42.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.arp.SPA         : LPM       0a000102/32
+Action entry: IngressProcess.pkt_check - 102,101,1,
+
+[07:44:24.662] [bmv2] [D] [thread 8208] [42.0] [cxt 0] Action entry is IngressProcess.pkt_check - 102,101,1,
+[07:44:24.662] [bmv2] [T] [thread 8208] [42.0] [cxt 0] Action IngressProcess.pkt_check
+[07:44:24.662] [bmv2] [T] [thread 8208] [42.0] [cxt 0] dynamic-arp-inspection.p4(94) Primitive standard_metadata.egress_spec =
+[07:44:24.662] [bmv2] [T] [thread 8208] [42.0] [cxt 0] dynamic-arp-inspection.p4(95) Primitive hdr.ethernet.dstAddr =
+[07:44:24.662] [bmv2] [D] [thread 8208] [42.0] [cxt 0] Pipeline 'ingress': end
+[07:44:24.662] [bmv2] [D] [thread 8208] [42.0] [cxt 0] Egress port is 1
+[07:44:24.662] [bmv2] [D] [thread 8210] [42.0] [cxt 0] Pipeline 'egress': start
+[07:44:24.662] [bmv2] [D] [thread 8210] [42.0] [cxt 0] Pipeline 'egress': end
+[07:44:24.662] [bmv2] [D] [thread 8210] [42.0] [cxt 0] Deparser 'deparser': start
+[07:44:24.662] [bmv2] [D] [thread 8210] [42.0] [cxt 0] Deparsing header 'ethernet'
+[07:44:24.662] [bmv2] [D] [thread 8210] [42.0] [cxt 0] Deparsing header 'arp'
+[07:44:24.662] [bmv2] [D] [thread 8210] [42.0] [cxt 0] Deparser 'deparser': end
+[07:44:24.662] [bmv2] [D] [thread 8213] [42.0] [cxt 0] Transmitting packet of size 42 out of port 1
+[07:44:31.154] [bmv2] [D] [thread 8208] [43.0] [cxt 0] Processing packet received on port 3
+[07:44:31.154] [bmv2] [D] [thread 8208] [43.0] [cxt 0] Parser 'parser': start
+[07:44:31.154] [bmv2] [D] [thread 8208] [43.0] [cxt 0] Parser 'parser' entering state 'start'
+[07:44:31.154] [bmv2] [D] [thread 8208] [43.0] [cxt 0] Extracting header 'ethernet'
+[07:44:31.154] [bmv2] [D] [thread 8208] [43.0] [cxt 0] Parser state 'start': key is 0806
+[07:44:31.154] [bmv2] [T] [thread 8208] [43.0] [cxt 0] Bytes parsed: 14
+[07:44:31.154] [bmv2] [D] [thread 8208] [43.0] [cxt 0] Parser 'parser' entering state 'parse_arp'
+[07:44:31.154] [bmv2] [D] [thread 8208] [43.0] [cxt 0] Extracting header 'arp'
+[07:44:31.154] [bmv2] [D] [thread 8208] [43.0] [cxt 0] Parser state 'parse_arp' has no switch, going to default next state
+[07:44:31.154] [bmv2] [T] [thread 8208] [43.0] [cxt 0] Bytes parsed: 42
+[07:44:31.154] [bmv2] [D] [thread 8208] [43.0] [cxt 0] Parser 'parser': end
+[07:44:31.154] [bmv2] [D] [thread 8208] [43.0] [cxt 0] Pipeline 'ingress': start
+[07:44:31.154] [bmv2] [T] [thread 8208] [43.0] [cxt 0] dynamic-arp-inspection.p4(123) Condition "hdr.arp.isValid()" (node_2) is true
+[07:44:31.154] [bmv2] [T] [thread 8208] [43.0] [cxt 0] dynamic-arp-inspection.p4(124) Condition "hdr.arp.oper == 1" (node_3) is false
+[07:44:31.154] [bmv2] [T] [thread 8208] [43.0] [cxt 0] dynamic-arp-inspection.p4(128) Condition "hdr.arp.oper == 2" (node_5) is true
+[07:44:31.154] [bmv2] [T] [thread 8208] [43.0] [cxt 0] Applying table 'IngressProcess.arp_cache'
+[07:44:31.154] [bmv2] [D] [thread 8208] [43.0] [cxt 0] Looking up key:
+* hdr.arp.SPA         : 0a000102
+
+[07:44:31.154] [bmv2] [D] [thread 8208] [43.0] [cxt 0] Table 'IngressProcess.arp_cache': hit with handle 0
+[07:44:31.154] [bmv2] [D] [thread 8208] [43.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.arp.SPA         : LPM       0a000102/32
+Action entry: IngressProcess.pkt_check - 102,101,1,
+
+[07:44:31.154] [bmv2] [D] [thread 8208] [43.0] [cxt 0] Action entry is IngressProcess.pkt_check - 102,101,1,
+[07:44:31.154] [bmv2] [T] [thread 8208] [43.0] [cxt 0] Action IngressProcess.pkt_check
+[07:44:31.154] [bmv2] [T] [thread 8208] [43.0] [cxt 0] dynamic-arp-inspection.p4(94) Primitive standard_metadata.egress_spec =
+[07:44:31.154] [bmv2] [T] [thread 8208] [43.0] [cxt 0] dynamic-arp-inspection.p4(95) Primitive hdr.ethernet.dstAddr =
+[07:44:31.154] [bmv2] [D] [thread 8208] [43.0] [cxt 0] Pipeline 'ingress': end
+[07:44:31.154] [bmv2] [D] [thread 8208] [43.0] [cxt 0] Egress port is 0
+[07:44:31.154] [bmv2] [D] [thread 8209] [43.0] [cxt 0] Pipeline 'egress': start
+[07:44:31.154] [bmv2] [D] [thread 8209] [43.0] [cxt 0] Pipeline 'egress': end
+[07:44:31.154] [bmv2] [D] [thread 8209] [43.0] [cxt 0] Deparser 'deparser': start
+[07:44:31.154] [bmv2] [D] [thread 8209] [43.0] [cxt 0] Deparsing header 'ethernet'
+[07:44:31.154] [bmv2] [D] [thread 8209] [43.0] [cxt 0] Deparsing header 'arp'
+[07:44:31.154] [bmv2] [D] [thread 8209] [43.0] [cxt 0] Deparser 'deparser': end
+[07:44:31.154] [bmv2] [D] [thread 8213] [43.0] [cxt 0] Transmitting packet of size 42 out of port 0
